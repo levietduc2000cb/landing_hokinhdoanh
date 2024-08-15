@@ -1,0 +1,25 @@
+/* Class thêm */
+nav .active,
+nav .nav_link:hover{
+    background-color: #f5f5f5;
+    border-radius: 5px;
+}
+/* Thuộc tính thêm */
+.pb-1_5{
+    padding-block: 1.5px;
+}
+.bg-f5f5f5{
+    background-color: #f5f5f5;
+}
+.bg-e3e3e3{
+    background-color: #e3e3e3;
+}
+.bg-e8b931{
+    background-color: #e8b931;
+}
+.border-bababa{
+    border-color: #bababa !important;
+}
+.text-f0e0b2{
+    color: #f0e0b2;
+}
