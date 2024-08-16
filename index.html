@@ -19,22 +19,490 @@
     <title>Trang chủ</title>
 </head>
 <body>
-    <header class="w-100 d-flex justify-content-between px-5">
-        <div>
-            <img height="80" src="./assets/logos/logo.png" alt="logo">
+    <header class="w-full flex justify-between items-center px-7">
+        <div class="h-20">
+            <img class="h-20" src="./assets/logos/logo.png" alt="logo">
         </div>
-        <nav class="d-flex align-items-center gap-3 fs-6">    
-            <a class="px-2 pb-1_5 text-decoration-none text-black nav_link active" href="">Giới thiệu</a>
-            <a class="px-2 pb-1_5 text-decoration-none text-black nav_link" href="">Chức năng</a>
-            <a class="px-2 pb-1_5 text-decoration-none text-black nav_link" href="">Báo giá</a>
-            <a class="px-2 pb-1_5 text-decoration-none text-black nav_link" href="">36 Ngành nghề</a>
-            <a class="px-2 pb-1_5 text-decoration-none text-black nav_link" href="">Kiến thức</a>
-            <a class="px-3 pb-1_5 text-decoration-none text-black overflow-hidden border border-2 border-bababa rounded bg-e3e3e3 text-center" href="">Tư vấn</a>
-            <a class="px-2 pb-1_5 text-decoration-none text-f0e0b2 overflow-hidden border border-2 border-bababa rounded bg-e8b931 text-center" href="">Đăng ký</a>
+        <label for="menu" class="flex flex-col gap-y-1 md:hidden">
+          <span class="w-6 h-1 bg-black block rounded-lg"></span>
+          <span class="w-6 h-1 bg-black block rounded-lg"></span>
+          <span class="w-6 h-1 bg-black block rounded-lg"></span>
+        </label>
+        <input name="menu" id="menu" type="checkbox" hidden>
+        <nav class="fixed md:static bg-yellow-400 md:bg-white top-0 left-0 right-0 min-h-screen md:min-h-0 md:top-auto md:left-auto md:right-auto md:w-auto md:h-auto flex flex-col md:flex-row items-center gap-3 text-xl md:text-base px-3 md:px-0">
+            <label for="menu" class="text-4xl text-right w-full block md:hidden">&times;</label>
+            <a class="px-2 pb-1_5 text-black nav_link active" href="">Giới thiệu</a>
+            <a class="px-2 pb-1_5 text-black nav_link" href="">Chức năng</a>
+            <a class="px-2 pb-1_5 text-black nav_link" href="">Báo giá</a>
+            <a class="px-2 pb-1_5 text-black nav_link" href="">36 Ngành nghề</a>
+            <a class="px-2 pb-1_5 text-black nav_link" href="">Kiến thức</a>
+            <a class="px-3 py-1 md:py-0 text-black overflow-hidden border-solid border-2 border-[#bababa] rounded bg-[#e3e3e3] text-center w-full md:w-auto" href="">Tư vấn</a>
+            <a class="px-2 py-1 md:py-0 text-[#f0e0b2] overflow-hidden border-solid border-2 border-[#bababa] rounded bg-[#e8b931] text-center w-full md:w-auto" href="">Đăng ký</a>
         </nav>
     </header>
-    <div>
-        
+    <div class="bg-cover bg-center px-4 md:px-40 pb-16 pt-10 md:pt-36" style="background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('./assets/images/background_home.jpg');">
+        <p class="text-4xl text-center md:text-left md:text-[4.5rem] md:leading-[5rem] font-semibold">Kinh doanh Truyền thống và<br class="hidden md:block"/>Online trên cùng 1 nền tảng</p>
+        <p class="text-2xl text-center md:text-left md:text-[1.7rem] mt-10">Ứng dụng kinh doanh toàn diện, giúp tăng doanh thu và quản lý hiệu quả</p>
+        <ul class="text-center text-xl md:text-left md:text-2xl mt-16">
+          <li>Bán hàng online</li>
+          <li>Quản lý kế toán</li>
+          <li>Quản lý bán hàng</li>
+          <li>Gọi xe ship hàng</li>
+        </ul>
+        <div class="text-base gap-6 flex flex-col md:flex-row mt-6">
+          <a href="" class="block w-full md:inline-block bg-[#2c2c2c] text-white md:w-32 py-3 text-center rounded-lg">Tư vấn</a>
+          <a href="" class="block w-full md:inline-block bg-[#e8b931] text-white md:w-32 py-3 text-center rounded-lg border-2 border-solid border-gray-500">Mua ngay</a>
+          <a href="" class="block w-full md:inline-block bg-[#fffbeb] text-gray-700 md:w-32 py-3 text-center rounded-lg border-2 border-solid border-gray-500">Trải nghiệm</a>
+        </div>
+    </div>
+    <div class="pt-16 pb-24 px-4 md:px-16 flex flex-col-reverse md:flex-row items-center gap-x-24">
+      <div>
+        <p class="text-2xl md:text-3xl mt-4 md:mt-0"><span class="underline">Dothithongminh1.vn</span>(với sản phẩm lõi HKDO)<br class="hidden md:block"/> là nền tảng kinh doanh hợp nhất - duy nhất tại<br/>Việt Nam</p>
+        <p class="mt-7 md:mt-11">Từ năm 2020, bán hàng online đã trở thành một phần quan trọng, gắn liền với<br/>kinh doanh truyền thống. HKDO không chỉ hỗ trợ kế toán và quản lý bán hàng mà<br/>còn tích hợp nền tảng kinh doanh Dothithongminh1.vn. Điều này giúp cho các hộ kinh<br/>doanh dễ dàng và thuận tiện quản lý toàn bộ hoạt động kinh doanh, từ bán hàng<br/>tại điểm bán, kế toán, bán hàng online, đến gọi xe</p>
+      </div>
+      <div class="flex justify-center items-center">
+        <img class="w-[37.5rem]" src="./assets/images/circle_hokinhdoanh.JPG" alt="circle_hokinhdoanh">
+      </div>
+    </div>
+    <div class="grid md:grid-cols-3 border-t-2 border-b-2 border-gray-500">
+      <div class="text-center pt-14 pb-4 border-b-2 md:border-b-0 border-r-2 border-gray-500">
+        <p class="text-4xl md:text-5xl font-bold">30<br/>năm</p>
+        <p class="mt-8">Kinh nghiệm phát triển sản phẩm tại Effect</p>
+        <div class="flex justify-center mt-11"><img width="70" height="70" src="./assets/images/people_starts.png" alt=""></div c>
+      </div>
+      <div class="text-center pt-14 pb-4 border-b-2 md:border-b-0 border-r-2 border-gray-500">
+        <p class="text-4xl md:text-5xl font-bold">36<br/>ngành nghề</p>
+        <p class="mt-8">Hộ kinh doanh đang sử dụng</p>
+        <div class="flex justify-center mt-11"><img width="70" height="70" src="./assets/images/setting.png" alt=""></div c>
+      </div>
+      <div class="text-center pt-14 pb-4 border-r-2 md:border-r-0 border-gray-500 md:border-transparent">
+        <p class="text-4xl md:text-5xl font-bold">5000+<br/>khách hàng</p>
+        <p class="mt-8">Đang sử dụng HKDO</p>
+        <div class="flex justify-center mt-11"><img width="70" height="70" src="./assets/images/stars.png" alt=""></div c>
+      </div>
+    </div>
+    <div class="pt-8 pb-12 md:px-3 flex justify-center">
+      <ul class="text-center">
+        <li class="inline-block border-2 border-solid border-gray-800 rounded-lg md:mr-6 mt-5"><div class="flex items-center justify-center gap-x-3 text-xl px-5 py-4"><img height="32" width="32" src="./assets/images/circle_checked.png" alt="">Tích hợp hoá đơn</div></li>
+        <li class="inline-block border-2 border-solid border-gray-800 rounded-lg md:mr-6 mt-5"><div class="flex items-center justify-center gap-x-3 text-xl px-5 py-4"><img height="32" width="32" src="./assets/images/circle_checked.png" alt="">Hoá đơn điện tử</div></li>
+        <li class="inline-block border-2 border-solid border-gray-800 rounded-lg md:mr-6 mt-5"><div class="flex items-center justify-center gap-x-3 text-xl px-5 py-4"><img height="32" width="32" src="./assets/images/circle_checked.png" alt="">Theo dõi dòng tiền</div></li>
+        <li class="inline-block border-2 border-solid border-gray-800 rounded-lg md:mr-6 mt-5"><div class="flex items-center justify-center gap-x-3 text-xl px-5 py-4"><img height="32" width="32" src="./assets/images/circle_checked.png" alt="">Kết nối khách hàng</div></li>
+        <li class="inline-block border-2 border-solid border-gray-800 rounded-lg md:mr-6 mt-5"><div class="flex items-center justify-center gap-x-3 text-xl px-5 py-4"><img height="32" width="32" src="./assets/images/circle_checked.png" alt="">Website bán hàng</div></li>
+        <li class="inline-block border-2 border-solid border-gray-800 rounded-lg md:mr-6 mt-5"><div class="flex items-center justify-center gap-x-3 text-xl px-5 py-4"><img height="32" width="32" src="./assets/images/circle_checked.png" alt="">Kiểm soát giao dịch</div></li>
+        <li class="inline-block border-2 border-solid border-gray-800 rounded-lg md:mr-6 mt-5"><div class="flex items-center justify-center gap-x-3 text-xl px-5 py-4"><img height="32" width="32" src="./assets/images/circle_checked.png" alt="">Quản lý kho hàng</div></li>
+        <li class="inline-block border-2 border-solid border-gray-800 rounded-lg md:mr-6 mt-5"><div class="flex items-center justify-center gap-x-3 text-xl px-5 py-4"><img height="32" width="32" src="./assets/images/circle_checked.png" alt="">Kế toán chuyên nghiệp</div></li>
+        <li class="inline-block border-2 border-solid border-gray-800 rounded-lg md:mr-6 mt-5"><div class="flex items-center justify-center gap-x-3 text-xl px-5 py-4"><img height="32" width="32" src="./assets/images/circle_checked.png" alt="">Theo dõi đơn hàng</div></li>
+        <li class="inline-block border-2 border-solid border-gray-800 rounded-lg md:mr-6 mt-5"><div class="flex items-center justify-center gap-x-3 text-xl px-5 py-4"><img height="32" width="32" src="./assets/images/circle_checked.png" alt="">Bảo mật an toàn</div></li>
+      </ul>
+    </div>
+    <div class="bg-[#ffce38] w-full h-[80vh] md:h-screen relative pt-12 md:pt-24 pb-16">
+        <img class="absolute h-full translate-x-[-23%] translate-y-[-8%] z-10" src="./assets/images/background_video.png" alt="background_video">
+        <div class="absolute z-20 w-full h-full">
+          <h1 class="text-center text-white font-bold text-3xl md:text-4xl">Giới thiệu chung về HKDO và DTTM1.vn</h1>
+          <div class="w-full flex items-center justify-center mt-5 md:mt-9  md:h-[70vh]">
+            <div class="w-[98%] h-[50vh] md:h-[70vh] md:w-[72%]">
+              <iframe class="w-full h-full" src="https://www.youtube.com/embed/_22w7tTg6mA?si=SOS-yTiOOBISrIUy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="w-full md:h-screen relative md:mt-24 mb-12 md:mb-24">
+      <img class="hidden md:block absolute left-[50%] translate-x-[-50%] md:h-full" src="./assets/images/round_layout.png" alt="round_layout">
+      <div class="md:absolute md:left-[50%] md:w-[80%] md:translate-y-20 md:translate-x-[-50%]">
+        <div class="md:flex md:justify-between">
+          <div class="px-4 md:px-14 py-5 rounded-lg text-left relative">
+              <p class="font-semibold text-3xl feature_title cursor-pointer">Kế Toán</p>
+              <p class="text-xl mt-3 feture_des transition_left">Kê khai thuế thông tư 40, 88/2021-BTC<br class="hidden md:block"/>và tích hợp hoá đơn điện tử thông tư<br class="hidden md:block"/>78/2021-BTC</p>
+              <div class="absolute top-0 left-0 right-0 bottom-0 z-[-1] rounded-lg feture_background"></div>
+          </div>
+          <div class="px-4 md:px-14 py-5 rounded-lg text-left md:text-right relative">
+            <p class="font-semibold text-3xl feature_title cursor-pointer">Bán hàng Truyền thống</p>
+            <p class="text-xl mt-3 feture_des transition_right">Quản lý sản phẩm, kho, đơn hàng,<br class="hidden md:block"/>khách hàng, dòng tiền chi tiết</p>
+            <div class="absolute top-0 left-0 right-0 bottom-0 z-[-1] rounded-lg feture_background"></div>
+          </div>
+        </div>
+        <div class="md:flex justify-between md:mt-8">
+          <div class="px-4 md:px-14 py-5 rounded-lg text-left relative">
+              <p class="font-semibold text-3xl feature_title cursor-pointer">Gọi Xe</p>
+              <p class="text-xl mt-3 feture_des transition_left">Tính năng gọi xe ôm công nghệ giúp<br class="hidden md:block"/>việc giao hàng trở nên dễ dàng và<br/>thuận tiện hơn bao giờ hết</p>
+              <div class="absolute top-0 left-0 right-0 bottom-0 z-[-1] rounded-lg feture_background"></div>
+          </div>
+          <div class="px-4 md:px-14 py-5 rounded-lg text-left md:text-right relative">
+            <p class="font-semibold text-3xl feature_title cursor-pointer">Kinh doanh Online</p>
+            <p class="text-xl mt-3 feture_des transition_right">Tích hợp bán hàng trực tuyến dễ dàng,<br class="hidden md:block"/>giúp hộ kinh doanh tiếp cận nhiều khách<br/>hàng hơn, đặc biệt trong cùng khu vực</p>
+            <div class="absolute top-0 left-0 right-0 bottom-0 z-[-1] rounded-lg feture_background"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="px-4 md:px-0">
+      <p class="font-semibold text-3xl md:text-4xl feature_title text-center">Ứng dụng 5-trong-1 hiệu quả nhất của Hộ kinh doanh</p>
+      <div class="flex flex-col md:flex-row justify-center gap-9 my-14 px-">
+        <a href="" class="block text-xl text-center text-white bg-[#eec733] font-semibold rounded-lg px-6 py-3" >Dùng Thử Miễn Phí</a>
+        <a href="" class="block text-xl text-center font-semibold rounded-lg px-6 py-3 border-2 border-gray-500" >Tư Vấn Miễn Phí</a>
+      </div>
+    </div>
+    <div class="px-4 md:px-0 slide_home">
+      <div class="flex slide_content_wrapper">
+        <div class="w-full flex-shrink-0 slide_content">
+          <p class="font-semibold text-3xl md:text-4xl feature_title text-center">Tự động tạo sổ kế toán, tờ khai thuế, hoá đơn điện tử</p>
+          <p class="text-center text-base md:text-xl my-4 md:my-6">HKDO tự động tạo sổ kế toán, tờ khai thuế và hóa đơn điện tử, giúp tiết kiệm thời gian và giảm<br/>thiểu sai sót. Bạn chỉ cần nhập dữ liệu ban đầu, hệ thống sẽ xử lý và xuất các báo cáo cần thiết.<br/>Tính năng này đảm bảo công việc kế toán và khai báo thuế diễn ra chính xác và nhanh chóng.</p>
+        </div>
+        <div class="w-full flex-shrink-0 slide_content">
+          <p class="font-semibold text-3xl md:text-4xl feature_title text-center">Kết nối kinh doanh địa phương</p>
+          <p class="text-center text-base md:text-xl my-4 md:my-6">Ứng dụng cho phép bạn kết nối trực tiếp với người mua, nhà phân phối và người vận chuyển địa phương, tạo<br/>ra một mạng lưới liên kết tin cậy. Bạn có thể dễ dàng tương tác và giao dịch mua bán ngay trong khu vực của<br/>mình. Tính năng này giúp tối ưu quy trình kinh doanh và giao nhận, nâng cao hiệu quả hoạt động.</p>
+        </div>
+        <div class="w-full flex-shrink-0 slide_content">
+          <p class="font-semibold text-3xl md:text-4xl feature_title text-center">Báo cáo biểu đồ</p>
+          <p class="text-center text-base md:text-xl my-4 md:my-6">Giúp bạn trực quan hóa dữ liệu kinh doanh. Bạn có thể dễ dàng xem các chỉ số quan trọng như<br/>doanh thu, lượng hàng tồn kho, và hiệu suất bán hàng. Tính năng này hỗ trợ việc ra quyết định<br/>nhanh chóng và chính xác hơn.</p>
+        </div>
+        <div class="w-full flex-shrink-0 slide_content">
+          <p class="font-semibold text-3xl md:text-4xl feature_title text-center">Sử dụng trên điện thoại mọi lúc mọi nơi</p>
+          <p class="text-center text-base md:text-xl my-4 md:my-6">Bạn có thể quản lý công việc mọi lúc, mọi nơi. Giao diện thân thiện và tối ưu cho điện thoại di<br/>động giúp bạn thao tác nhanh chóng và tiện lợi. Bạn có thể theo dõi và điều hành kinh doanh mà<br/>không cần phải ngồi trước máy tính.</p>
+        </div>
+      </div>
+      <div class="relative slide_image_wrapper h-[50vh] md:h-[60vh]">
+        <div class="absolute block h-full w-full slide_image">
+            <div class="flex justify-center relative">
+              <img class="h-[50vh] md:h-[60vh] z-20" src="./assets/images/hokinhdoanh_invoice.png" alt="slide_image">
+              <img class="h-[50vh] hidden md:block md:h-[60vh] absolute left-0 scale-75" src="./assets/images/hokinhdoanh_report_table_left.png" alt="slide_image">
+              <img class="h-[50vh] hidden md:block md:h-[60vh] absolute right-0 scale-75" src="./assets/images/hokinhdoanh_report_table_right.png" alt="slide_image">
+            </div>
+        </div>
+        <div class="absolute block h-full w-full slide_image">
+          <div class="flex justify-center relative">
+            <img class="h-[50vh] md:h-[60vh] z-20" src="./assets/images/slide_image.png" alt="slide_image">
+            <img class="h-[50vh] hidden md:block md:h-[60vh] absolute left-0 scale-75" src="./assets/images/slide_image.png" alt="slide_image">
+            <img class="h-[50vh] hidden md:block md:h-[60vh] absolute right-0 scale-75" src="./assets/images/slide_image.png" alt="slide_image">
+          </div>
+        </div>
+        <div class="absolute block h-full w-full slide_image">
+          <div class="flex justify-center relative">
+            <img class="h-[50vh] md:h-[60vh] z-20" src="./assets/images/hokinhdoanh_chart.png" alt="slide_image">
+            <img class="h-[50vh] hidden md:block md:h-[60vh] absolute left-0 scale-75" src="./assets/images/hokinhdoanh_chart_left.png" alt="slide_image">
+            <img class="h-[50vh] hidden md:block md:h-[60vh] absolute right-0 scale-75" src="./assets/images/hokinhdoanh_chart_right.png" alt="slide_image">
+          </div>
+        </div>
+        <div class="absolute block h-full w-full slide_image">
+          <div class="flex justify-center relative">
+            <img class="h-[50vh] md:h-[60vh] z-20" src="./assets/images/hokinhdoanh_mobile.png" alt="slide_image">
+            <img class="h-[50vh] hidden md:block md:h-[60vh] absolute left-[22%] scale-90" src="./assets/images/hokinhdoanh_mobile_left_1.png" alt="slide_image">
+            <img class="h-[50vh] hidden md:block md:h-[60vh] absolute left-[6%] scale-75" src="./assets/images/hokinhdoanh_mobile_left_2.png" alt="slide_image">
+            <img class="h-[50vh] hidden md:block md:h-[60vh] absolute right-[22%] scale-90" src="./assets/images/hokinhdoanh_mobile_right_1.png" alt="slide_image">
+            <img class="h-[50vh] hidden md:block md:h-[60vh] absolute right-[6%] scale-75" src="./assets/images/hokinhdoanh_mobile_right_2.png" alt="slide_image">
+          </div>
+        </div>
+      </div>
+      <div class="flex gap-5 justify-center my-3 md:my-6">
+        <button><img id="arrow_left" class="rotate-180" width="35" src="./assets/images/arrow_right.png" alt="arrow_left"></button>
+        <button><img id="arrow_right" width="35" src="./assets/images/arrow_right.png" alt="arrow_right"></button>
+      </div>
+    </div>
+    <div class="px-4 md:px-0">
+      <div class="flex flex-col md:flex-row justify-center gap-9 my-14">
+        <a href="" class="block text-xl text-center text-white bg-[#eec733] font-semibold rounded-lg px-6 py-3" >Dùng Thử Miễn Phí</a>
+        <a href="" class="block text-xl text-center font-semibold rounded-lg px-6 py-3 border-2 border-gray-500" >Tư Vấn Miễn Phí</a>
+      </div>
+    </div>
+    <div class="flex px-4 md:px-14 items-center">
+      <div class="w-full md:w-3/5">
+        <p class="font-semibold text-3xl md:text-4xl text-center md:text-left">Hộ Kinh Doanh nói gì về HKDO?</p>
+        <div>
+          <div class="md:flex justify-between gap-10">
+            <div class="px-4 md:px-7 bg-[#f2f2f2] rounded-2xl mt-20 w-full md:w-2/5">
+              <div class="flex justify-center"><div class="rounded-full w-16 h-16 overflow-hidden translate-y-[-65%]"><img class="object-cover w-full h-full" src="./assets/images/avatar_person_1.jpg" alt="avatar_person_1"></div></div>
+              <div class="translate-y-[-20%] flex flex-col justify-between">
+                <p>Phần mềm dễ dùng, dễ đào<br/>tạo cho nhân viên</p>
+                <div>
+                  <p class="text-right font-semibold">Nhà hàng</p>
+                  <p class="text-right">Chức vụ</p>
+                  <div class="flex justify-center mt-4"><div class="w-32"><img class="w-full" src="./assets/images/stars_rating.png" alt=""></div></div>
+                </div>
+              </div>
+            </div>
+            <div class="px-4 md:px-7 bg-[#f2f2f2] rounded-2xl mt-20 w-full md:w-3/5">
+              <div class="flex justify-center"><div class="rounded-full w-16 h-16 overflow-hidden translate-y-[-65%]"><img class="object-cover w-full h-full" src="./assets/images/avatar_person_2.jpg" alt="avatar_person_1"></div></div>
+              <div class="translate-y-[-20%] flex flex-col justify-between">
+                <p class="text-center">Nhà nào mở hộ kinh doanh, nhà hàng, quán nhỏ<br/>thì dùng phần mềm này rất chuẩn, kiêm kế toán<br/>và cả bán hàng online lẫn tại chỗ</p>
+                <div>
+                  <p class="text-center font-semibold">Quán ăn vỉa hè</p>
+                  <p class="text-center">Chủ quán</p>
+                  <div class="flex justify-center mt-4"><div class="w-32"><img class="w-full" src="./assets/images/stars_rating.png" alt=""></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="md:flex justify-between gap-10">
+            <div class="px-4 md:px-7 bg-[#f2f2f2] rounded-2xl mt-20 w-full md:w-3/5">
+              <div class="flex justify-center"><div class="rounded-full w-16 h-16 overflow-hidden translate-y-[-65%]"><img class="object-cover w-full h-full" src="./assets/images/avatar_person_3.jpg" alt="avatar_person_1"></div></div>
+              <div class="translate-y-[-20%] flex flex-col justify-between">
+                <p class="text-center">Nhà thuốc nhỏ thì nên dùng PM rất tiện<br/>nhanh, rất dễ hiểu, công ty uy tín lâu năm</p>
+                <div>
+                  <p class="text-center font-semibold">Nhà thuốc</p>
+                  <p class="text-center">Nhân viên</p>
+                  <div class="flex justify-center mt-4"><div class="w-32"><img class="w-full" src="./assets/images/stars_rating.png" alt=""></div></div>
+                </div>
+              </div>
+            </div>
+            <div class="px-4 md:px-7 bg-[#f2f2f2] rounded-2xl mt-20 w-full md:w-2/5">
+              <div class="flex justify-center"><div class="rounded-full w-16 h-16 overflow-hidden translate-y-[-65%]"><img class="object-cover w-full h-full" src="./assets/images/avatar_person_4.jpg" alt="avatar_person_1"></div></div>
+              <div class="translate-y-[-20%] flex flex-col justify-between">
+                <p>Không làm màu mè quá. Dễ<br/>và thẳng tới vấn đề</p>
+                <div>
+                  <p class="text-right font-semibold">Quán cafe</p>
+                  <p class="text-right">Chức vụ</p>
+                  <div class="flex justify-center mt-4"><div class="w-32"><img class="w-full" src="./assets/images/stars_rating.png" alt=""></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hidden w-2/5 md:flex flex-col items-center">
+        <div class="grid grid-cols-1 gap-5">
+          <p class="text-left text-xl">Tôi là...</p>
+          <a href="" class="flex gap-x-3 items-center px-6 py-3 border-2 border-solid border-gray-500 rounded-lg business_item active hover:text-white hover:bg-[#eec733]">
+            <img class="icon_circle_checked_2" width="30" src="./assets/images/circle_checked_2.svg" alt="circle_checked_2">
+            <img class="icon_circle_checked_3" width="30" src="./assets/images/circle_checked_3.svg" alt="circle_checked_3">
+            Nhà hàng
+          </a>
+          <a href="" class="flex gap-x-3 items-center px-6 py-3 border-2 border-solid border-gray-500 rounded-lg business_item hover:text-white hover:bg-[#eec733]">
+            <img class="icon_circle_checked_2" width="30" src="./assets/images/circle_checked_2.svg" alt="circle_checked_2">
+            <img class="icon_circle_checked_3" width="30" src="./assets/images/circle_checked_3.svg" alt="circle_checked_3">
+            Quán vỉa hè
+          </a>
+          <a href="" class="flex gap-x-3 items-center px-6 py-3 border-2 border-solid border-gray-500 rounded-lg business_item hover:text-white hover:bg-[#eec733]">
+            <img class="icon_circle_checked_2" width="30" src="./assets/images/circle_checked_2.svg" alt="circle_checked_2">
+            <img class="icon_circle_checked_3" width="30" src="./assets/images/circle_checked_3.svg" alt="circle_checked_3">
+            Nhà thuốc
+          </a>
+          <a href="" class="flex gap-x-3 items-center px-6 py-3 border-2 border-solid border-gray-500 rounded-lg business_item hover:text-white hover:bg-[#eec733]">
+            <img class="icon_circle_checked_2" width="30" src="./assets/images/circle_checked_2.svg" alt="circle_checked_2">
+            <img class="icon_circle_checked_3" width="30" src="./assets/images/circle_checked_3.svg" alt="circle_checked_3">
+            Quán cafe
+          </a>
+          <a href="" class="flex gap-x-3 items-center px-6 py-3 border-2 border-solid border-gray-500 rounded-lg business_item hover:text-white hover:bg-[#eec733]">
+            <img class="icon_circle_checked_2" width="30" src="./assets/images/circle_checked_2.svg" alt="circle_checked_2">
+            <img class="icon_circle_checked_3" width="30" src="./assets/images/circle_checked_3.svg" alt="circle_checked_3">
+            Ngành khác
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="my-16">
+      <div class="w-screen bg-[#eec733] h-10 overflow-hidden">
+        <div class="relative h-full flex items-center">
+          <ul class="absolute left-0 flex gap-x-6 slide_infinity flex-shrink-0">
+            <li class="flex-shrink-0">Chạy chữ trên HKDO</li>
+            <li class="flex-shrink-0">Chạy chữ trên HKDO</li>
+            <li class="flex-shrink-0">Chạy chữ trên HKDO</li>
+            <li class="flex-shrink-0">Chạy chữ trên HKDO</li>
+            <li class="flex-shrink-0">Chạy chữ trên HKDO</li>
+            <li class="flex-shrink-0">Chạy chữ trên HKDO</li>
+            <li class="flex-shrink-0">Chạy chữ trên HKDO</li>
+            <li class="flex-shrink-0">Chạy chữ trên HKDO</li>
+            <li class="flex-shrink-0">Chạy chữ trên HKDO</li>
+            <li class="flex-shrink-0">Chạy chữ trên HKDO</li>
+            <li class="flex-shrink-0">Chạy chữ trên HKDO</li>
+            <li class="flex-shrink-0">Chạy chữ trên HKDO</li>
+            <li class="flex-shrink-0">Chạy chữ trên HKDO</li>
+            <li class="flex-shrink-0">Chạy chữ trên HKDO</li>
+            <li class="flex-shrink-0">Chạy chữ trên HKDO</li>
+            <li class="flex-shrink-0">Chạy chữ trên HKDO</li>
+            <li class="flex-shrink-0">Chạy chữ trên HKDO</li>
+            <li class="flex-shrink-0">Chạy chữ trên HKDO</li>
+            <li class="flex-shrink-0">Chạy chữ trên HKDO</li>
+            <li class="flex-shrink-0">Chạy chữ trên HKDO</li>
+            <li class="flex-shrink-0">Chạy chữ trên HKDO</li>
+            <li class="flex-shrink-0">Chạy chữ trên HKDO</li>
+            <li class="flex-shrink-0">Chạy chữ trên HKDO</li>
+            <li class="flex-shrink-0">Chạy chữ trên HKDO</li>
+            <li class="flex-shrink-0">Chạy chữ trên HKDO</li>
+            <li class="flex-shrink-0">Chạy chữ trên HKDO</li>
+            <li class="flex-shrink-0">Chạy chữ trên HKDO</li>
+            <li class="flex-shrink-0">Chạy chữ trên HKDO</li>
+            <li class="flex-shrink-0">Chạy chữ trên HKDO</li>
+          </ul>
+          <ul class="absolute left-[340px] flex gap-x-6 slide_infinity flex-shrink-0">
+            <li class="flex-shrink-0">Chạy chữ trên HKDO</li>
+            <li class="flex-shrink-0">Chạy chữ trên HKDO</li>
+            <li class="flex-shrink-0">Chạy chữ trên HKDO</li>
+            <li class="flex-shrink-0">Chạy chữ trên HKDO</li>
+            <li class="flex-shrink-0">Chạy chữ trên HKDO</li>
+            <li class="flex-shrink-0">Chạy chữ trên HKDO</li>
+            <li class="flex-shrink-0">Chạy chữ trên HKDO</li>
+            <li class="flex-shrink-0">Chạy chữ trên HKDO</li>
+            <li class="flex-shrink-0">Chạy chữ trên HKDO</li>
+            <li class="flex-shrink-0">Chạy chữ trên HKDO</li>
+            <li class="flex-shrink-0">Chạy chữ trên HKDO</li>
+            <li class="flex-shrink-0">Chạy chữ trên HKDO</li>
+            <li class="flex-shrink-0">Chạy chữ trên HKDO</li>
+            <li class="flex-shrink-0">Chạy chữ trên HKDO</li>
+            <li class="flex-shrink-0">Chạy chữ trên HKDO</li>
+            <li class="flex-shrink-0">Chạy chữ trên HKDO</li>
+            <li class="flex-shrink-0">Chạy chữ trên HKDO</li>
+            <li class="flex-shrink-0">Chạy chữ trên HKDO</li>
+            <li class="flex-shrink-0">Chạy chữ trên HKDO</li>
+            <li class="flex-shrink-0">Chạy chữ trên HKDO</li>
+            <li class="flex-shrink-0">Chạy chữ trên HKDO</li>
+            <li class="flex-shrink-0">Chạy chữ trên HKDO</li>
+            <li class="flex-shrink-0">Chạy chữ trên HKDO</li>
+            <li class="flex-shrink-0">Chạy chữ trên HKDO</li>
+            <li class="flex-shrink-0">Chạy chữ trên HKDO</li>
+            <li class="flex-shrink-0">Chạy chữ trên HKDO</li>
+            <li class="flex-shrink-0">Chạy chữ trên HKDO</li>
+            <li class="flex-shrink-0">Chạy chữ trên HKDO</li>
+            <li class="flex-shrink-0">Chạy chữ trên HKDO</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="px-4 pb-20 md:px-14 md:flex gap-x-32 relative">
+      <div class="w-full md:w-[60%]">
+        <p class="text-center md:text-left font-semibold text-3xl mb-14">Báo giá phần mềm</p>
+        <div class="grid md:grid-cols-2 gap-x-20">
+          <div class="flex flex-col bg-white rounded-lg">
+            <div class="bg-[#ffe177] text-white py-4 rounded-lg shadow-lg text-center font-bold">QUẢN LÝ & KẾ TOÁN</div>
+            <div class="flex flex-col justify-between px-6 flex-1">
+                <div class="text-center">
+                  <p class="font-bold text-3xl mt-6">1,200,000đ</p>
+                  <p class="text-lg text-gray-500 ">/năm</p>
+                  <p class="text-lg my-5">Tính năng:</p>
+                  <div class="flex justify-center">
+                    <ul class="text-lg text-left">
+                      <li>Quản lý bán hàng</li>
+                      <li>Kế toán hộ kinh doanh</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="flex flex-col items-center">
+                  <a class="text-lg font-bold text-center bg-[#ffe177] text-white w-full rounded-lg py-2" href="">Đăng ký ngay</a>
+                  <p class="text-base py-4">(Khi có mã giới thiệu)</p>
+                </div>
+            </div>
+          </div>
+          <div class="flex flex-col bg-white rounded-lg">
+            <div class="bg-[#145da0] text-white py-4 rounded-lg shadow-lg text-center font-bold">BÁN ONLINE</div>
+            <div class="flex flex-col justify-between px-6">
+                <div class="text-center">
+                  <p class="font-bold text-3xl mt-6">1,200,000đ</p>
+                  <p class="text-lg text-gray-500 ">/năm</p>
+                  <p class="text-lg my-5">Tính năng:</p>
+                  <div class="flex justify-center">
+                    <ul class="text-lg text-left">
+                      <li>Web bán hàng online</li>
+                      <li>Gọi xe công nghệ</li>
+                      <li>Thành viên<br/><a href="#" class="underline">dothithongminh1.vn</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="flex flex-col items-center mt-10">
+                  <a class="text-lg font-bold text-center bg-[#145da0] text-white w-full rounded-lg py-2" href="">Đăng ký ngay</a>
+                  <p class="text-base py-4">(Khi có mã giới thiệu)</p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="md:flex-1">
+        <div class="bg-white rounded-lg">
+          <div class="bg-[#ff3b3b] font-bold md:font-semibold md:text-xl text-center w-full py-4 text-white rounded-lg shadow-lg relative">
+            COMBO
+            <img class="hidden md:block absolute top-0 right-0 translate-y-[-50%]" src="./assets/images/best_price.png" alt="best_price">
+          </div>
+          <div class="text-center px-6 md:px-12">
+            <p class="font-bold text-3xl md:text-6xl mt-6">1,999,000đ</p>
+            <p class="text-lg md:text-2xl text-gray-500 mt-4">/năm</p>
+            <p class="text-lg md:text-2xl my-5">Tính năng:</p>
+            <div class="flex justify-center">
+              <ul class="text-lg md:text-2xl text-left">
+                <li>Quản lý bán hàng</li>
+                <li>Kế toán hộ kinh doanh</li>
+                <li>Web bán hàng online</li>
+                <li>Gọi xe công nghệ</li>
+                <li>Thành viên<br><a href="" class="underline">dothithongminh1.vn</a></li>
+              </ul>
+            </div>
+            <div class="flex flex-col items-center mt-10">
+              <a class="text-lg md:text-2xl font-bold text-center bg-[#ff3b3b] text-white w-full rounded-lg py-2" href="">Đăng ký ngay</a>
+              <p class="text-base md:text-xl py-4">(Khi có mã giới thiệu)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="absolute right-0 left-0 bottom-0 h-[95%] w-full bg-yellow-50 rounded-t-[100%] bg-gradient-to-r from-[#fed422] to-[#feee8f] z-[-1]"></div>
+    </div>
+    <div class="bg-[#fed756] py-12">
+      <div class="md:flex">
+        <div class="px-4 md:px-0 w-full md:w-[58%]">
+          <p class="font-semibold text-3xl md:text-6xl text-center text-white">Công cụ 5-trong-1 duy nhất<br class="hidden md:block"/>dành cho Hộ Kinh Doanh!</p>
+          <div class="hidden md:block bg-contain bg-no-repeat mt-20 bg-center" style="background-image: url('./assets/images/circle_background.png');">
+            <img class="translate-y-[-15%]" src="./assets/images/use_phone.png" alt="use_phone">
+          </div>
+        </div>
+        <div class="flex justify-center w-full md:w-[42%] mt-4 md:mt-0">
+          <form action="" class="bg-white rounded-3xl w-full md:w-[80%] text-center p-6 md:p-12 h-fit">
+            <p class="font-semibold text-2xl md:text-3xl">Cần tư vấn thêm về nền tảng</p>
+            <p class="font-semibold text-2xl md:text-3xl"><span class="text-[#fed756]">HKDO (hokinhdoanhonline)</span>?</p>
+            <div class="text-left flex flex-col gap-y-2 mt-10">
+              <div class="text-lg md:text-xl">
+                <label class="block ml-5" for="full_name">Họ tên</label>
+                <input name="full_name" class="p-2 border-2 border-solid border-gray-500 w-full rounded-xl" type="text">
+              </div>
+              <div class="text-lg md:text-xl">
+                <label class="block ml-5" for="business_profession">Ngành nghề kinh doanh</label>
+                <input class="p-2 border-2 border-solid border-gray-500 w-full rounded-xl" name="business_profession" type="text">
+              </div>
+              <div class="text-lg md:text-xl">
+                <label class="block ml-5" for="email">Email</label>
+                <input class="p-2 border-2 border-solid border-gray-500 w-full rounded-xl" name="email" type="text">
+              </div>
+              <div class="text-lg md:text-xl">
+                <label class="block ml-5" for="phone">Số điện thoại</label>
+                <input class="p-2 border-2 border-solid border-gray-500 w-full rounded-xl" name="phone" type="text">
+              </div>
+              <div class="text-lg md:text-xl">
+                <label class="block ml-5" for="question">Câu hỏi</label>
+                <input class="p-2 border-2 border-solid border-gray-500 w-full rounded-xl" name="question" type="text">
+              </div>
+            </div>
+            <div class="mt-10 flex justify-center">
+              <button class="bg-[#eec733] font-semibold text-lg md:text-xl px-5 py-3 text-white flex items-center justify-center gap-x-1" type="submit">
+                <div class="flex flex-col justify-center items-center">
+                  <span class="w-3 h-[2.3px] bg-white mt-[1px]"></span>
+                  <span class="w-3 h-[2.3px] bg-white mt-[1px]"></span>
+                  <span class="w-3 h-[2.3px] bg-white mt-[1px]"></span>
+                  <span class="w-3 h-[2.3px] bg-white mt-[1px]"></span>
+                  <span class="w-3 h-[2.3px] bg-white mt-[1px]"></span>
+                </div>
+                <span>Tư vấn Miễn phí</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="text-3xl md:text-[5rem] text-center text-white font-semibold mt-7 md:mt-14 md:flex items-center justify-center">
+        <span>Cần hỏi nhanh? Zalo ngay!</span> 
+        <a href="https://zalo.me/2613090557211314383" class="flex justify-center mt-4 md:mt-0 md:block h-14 md:h-20"><img class="h-full" src="./assets/images/zalo.png" alt="zalo"></a>
+      </div>
     </div>
 </body>
+<script>
+  let slideContentWrapper = document.querySelector(".slide_content_wrapper");
+  let slideImageWrapper = document.querySelector(".slide_image_wrapper");
+  let arrowLeft = document.querySelector("#arrow_left");
+  let arrowRight = document.querySelector("#arrow_right");
+  arrowLeft.addEventListener("click",(e)=>{
+    let slideContent = document.querySelectorAll(".slide_content");
+    let slideImage = document.querySelectorAll(".slide_image");
+    slideContentWrapper.append(slideContent[0]);
+    slideImageWrapper.append(slideImage[0]);
+  });
+  arrowRight.addEventListener("click",(e)=>{
+    let slideContent = document.querySelectorAll(".slide_content");
+    let slideImage = document.querySelectorAll(".slide_image");
+    slideContentWrapper.prepend(slideContent[slideContent.length - 1]);
+    slideImageWrapper.prepend(slideImage[slideImage.length - 1]);
+  });
+</script>
 </html>
