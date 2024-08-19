@@ -1,6 +1,5 @@
-body{
-    max-width: 100vw;
-    overflow-x: hidden;
+html{
+    scroll-behavior: smooth;
 }
 .feature_title ~ .feture_des{
     opacity: 0;
@@ -24,7 +23,29 @@ body{
 .feature_title:hover ~ .feture_background{
     background-color: #eff0f25f;
 }
-
+.swipe_right_to_left{
+    animation: swipeRightToLeft ease-in-out 2s forwards;
+}
+.swipe_left_to_tight{
+    animation: swipeLeftToRight ease-in-out 2s forwards;
+}
+/* Hiệu ứng trượt từ trái qua phải */
+@keyframes swipeRightToLeft {
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+@keyframes swipeLeftToRight {
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
 /* Hiệu ứng slide */
 .slide_home .slide_content{
     transform: translateX(-100%);
