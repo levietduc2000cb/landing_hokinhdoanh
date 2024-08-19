@@ -92,24 +92,16 @@ html{
     display: block;
 }
 /* Chạy slide vô tận */
-.slide_infinity{
-    transform: translateX(0);
+.scroll_infinity{
+    animation: scrollInfinity 10s linear infinite;
 }
-.slide_infinity:nth-child(1){
-    animation: slide_move 20s linear infinite;
-}
-.slide_infinity:nth-child(2){
-    animation: slide_move 20s linear infinite;
-}
-@keyframes slide_move {
-    0% {
+@keyframes scrollInfinity{
+    0%{
         transform: translateX(0);
-    }
-    100%{
-        transform: translateX(-100%);
+    }100%{
+        transform: translateX(calc(-100% - 1rem));
     }
 }
-
 @media only screen and (max-width: 768px) {
     /* Menu navigation mobile */
     #menu ~ nav{
