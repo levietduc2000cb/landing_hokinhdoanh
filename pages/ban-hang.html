@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/styles/index.css" />
+    <link rel="stylesheet" href="../css/styles/ban-hang.css" />
+    <link
+      rel="stylesheet"
+      href="../libs/OwlCarousel/dist/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../libs/OwlCarousel/dist/assets/owl.theme.default.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="../libs/OwlCarousel/dist/owl.carousel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        mode: "jit",
+        theme: {
+          extend: {
+            screens: {
+              xs: { max: "639px" },
+              md: { min: "740px", max: "1023px" },
+            },
+          },
+        },
+      };
+    </script>
+    <title>Bán Hàng</title>
+  </head>
+  <body>
+    <header class="w-100 d-flex justify-content-between px-5">
+      <div>
+        <img height="80" src="../assets/logos/logo.png" alt="logo" />
+      </div>
+      <nav class="d-flex align-items-center gap-3 fs-6">
+        <a
+          class="px-2 pb-1_5 text-decoration-none text-black nav_link active"
+          href=""
+          >Giới thiệu</a
+        >
+        <a class="px-2 pb-1_5 text-decoration-none text-black nav_link" href=""
+          >Chức năng</a
+        >
+        <a class="px-2 pb-1_5 text-decoration-none text-black nav_link" href=""
+          >Báo giá</a
+        >
+        <a class="px-2 pb-1_5 text-decoration-none text-black nav_link" href=""
+          >36 Ngành nghề</a
+        >
+        <a class="px-2 pb-1_5 text-decoration-none text-black nav_link" href=""
+          >Kiến thức</a
+        >
+        <a
+          class="px-3 pb-1_5 text-decoration-none text-black overflow-hidden border-2 border-bababa rounded bg-e3e3e3 text-center"
+          href=""
+          >Tư vấn</a
+        >
+        <a
+          class="px-2 pb-1_5 text-decoration-none text-f0e0b2 overflow-hidden border-2 border-bababa rounded bg-e8b931 text-center"
+          href=""
+          >Đăng ký</a
+        >
+      </nav>
+    </header>
+
+    <!-- container -->
+    <div>
+      <!--  -->
+      <section
+        class="py-12 pt-0 xs:pb-[150px]"
+        style="
+          background-image: url('../assets/banners/ban-hang.png');
+          background-size: cover;
+          background-repeat: no-repeat;
+        "
+      >
+        <div
+          class="flex flex-col justify-center items-center gap-8 pt-12 pb-6 xs:gap-4 xs:px-4"
+        >
+          <h1 class="font-semibold text-[46px] xs:text-4xl xs:text-center">
+            “Bái-bai” với sổ sách thủ công!
+          </h1>
+          <span class="xs:text-center xs:text-sm"
+            >Bán thực: Ứng dụng quản lý bán hàng duy nhất Hộ Kinh Doanh
+            cần</span
+          >
+          <div class="flex gap-8 xs:grid xs:grid-cols-2 xs:grid-rows-3">
+            <div
+              class="flex flex-col gap-2 items-center p-4 rounded-lg bg-eec733 border-black w-[110px]"
+            >
+              <img
+                class="w-12 h-12"
+                src="https://images2.thanhnien.vn/528068263637045248/2024/1/25/e093e9cfc9027d6a142358d24d2ee350-65a11ac2af785880-17061562929701875684912.jpg"
+                alt=""
+              />
+              <span class="font-medium text-sm">Bán thực</span>
+            </div>
+
+            <div
+              class="flex flex-col gap-2 items-center p-4 rounded-lg bg-white border-black w-[110px]"
+            >
+              <img
+                class="w-12 h-12"
+                src="https://images2.thanhnien.vn/528068263637045248/2024/1/25/e093e9cfc9027d6a142358d24d2ee350-65a11ac2af785880-17061562929701875684912.jpg"
+                alt=""
+              />
+              <span class="font-medium text-sm">Kế toán</span>
+            </div>
+
+            <div
+              class="flex flex-col gap-2 items-center p-4 rounded-lg bg-white border-black w-[110px]"
+            >
+              <img
+                class="w-12 h-12"
+                src="https://images2.thanhnien.vn/528068263637045248/2024/1/25/e093e9cfc9027d6a142358d24d2ee350-65a11ac2af785880-17061562929701875684912.jpg"
+                alt=""
+              />
+              <span class="font-medium text-sm">Bán Online</span>
+            </div>
+
+            <div
+              class="flex flex-col gap-2 items-center p-4 rounded-lg bg-white border-black w-[110px]"
+            >
+              <img
+                class="w-12 h-12"
+                src="https://images2.thanhnien.vn/528068263637045248/2024/1/25/e093e9cfc9027d6a142358d24d2ee350-65a11ac2af785880-17061562929701875684912.jpg"
+                alt=""
+              />
+              <span class="font-medium text-sm">Gọi ship</span>
+            </div>
+
+            <div
+              class="flex flex-col gap-2 items-center p-4 rounded-lg bg-white border-black w-[110px] xs:col-span-2 xs:justify-self-center"
+            >
+              <img
+                class="w-12 h-12"
+                src="https://images2.thanhnien.vn/528068263637045248/2024/1/25/e093e9cfc9027d6a142358d24d2ee350-65a11ac2af785880-17061562929701875684912.jpg"
+                alt=""
+              />
+              <span class="font-medium text-sm">Đô thị</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--  -->
+      <div class="max-w-5xl mx-auto p-8 pb-16" id="quan-ly-ban-hang">
+        <div class="text-center">
+          <h1 class="text-2xl font-bold text-gray-800 mb-2">Tất cả những gì</h1>
+          <span>hộ kinh doanh</span>
+          <h2 class="text-xl font-semibold text-gray-800 mt-2">
+            cần để vận hành kinh doanh
+          </h2>
+        </div>
+
+        <div
+          class="flex xs:flex-col gap-2 items-center justify-between md:flex-row mt-8"
+        >
+          <div class="flex-1 space-y-4">
+            <div
+              class="bg-gray-100 shadow-md cursor-pointer p-4 rounded-md flex items-start space-x-4"
+              onclick="scrollToSection('quan-ly-ban-hang')"
+            >
+              <img
+                src="https://via.placeholder.com/40"
+                alt="Icon"
+                class="h-10 w-10"
+              />
+              <div>
+                <h3 class="text-lg font-bold text-yellow-500">
+                  Quản lý bán hàng, giao hàng
+                </h3>
+                <p class="text-gray-600 text-sm">
+                  Số hoá công việc theo dõi hoạt động bán hàng
+                </p>
+              </div>
+            </div>
+            <div
+              class="hover:bg-gray-100 hover:shadow-md hover:cursor-pointer p-4 flex items-start space-x-4"
+              onclick="scrollToSection('quan-ly-thu-chi')"
+            >
+              <img
+                src="https://via.placeholder.com/40"
+                alt="Icon"
+                class="h-10 w-10"
+              />
+              <div>
+                <h3 class="text-lg font-bold text-gray-800">
+                  Quản lý thu tiền, chi tiền
+                </h3>
+                <p class="text-gray-600 text-sm">
+                  Tự động tính toán doanh thu và dòng tiền mỗi ngày.
+                </p>
+              </div>
+            </div>
+            <div
+              class="hover:bg-gray-100 hover:shadow-md hover:cursor-pointer p-4 flex items-start space-x-4"
+              onclick="scrollToSection('quan-ly-hang-hoa')"
+            >
+              <img
+                src="https://via.placeholder.com/40"
+                alt="Icon"
+                class="h-10 w-10"
+              />
+              <div>
+                <h3 class="text-lg font-bold text-gray-800">
+                  Quản lý hàng hoá
+                </h3>
+                <p class="text-gray-600 text-sm">
+                  Dễ dàng quản lý hàng hoá và thông tin sản phẩm
+                </p>
+              </div>
+            </div>
+            <div
+              class="hover:bg-gray-100 hover:shadow-md hover:cursor-pointer p-4 flex items-start space-x-4"
+              onclick="scrollToSection('theo-doi-bao-cao')"
+            >
+              <img
+                src="https://via.placeholder.com/40"
+                alt="Icon"
+                class="h-10 w-10"
+              />
+              <div>
+                <h3 class="text-lg font-bold text-gray-800">
+                  Theo dõi báo cáo kinh doanh
+                </h3>
+                <p class="text-gray-600 text-sm">
+                  Nhìn nhanh các số liệu quan trọng trong ngày
+                </p>
+              </div>
+            </div>
+            <div
+              class="hover:bg-gray-100 hover:shadow-md hover:cursor-pointer p-4 flex items-start space-x-4"
+              onclick="scrollToSection('tong-ket-bao-cao')"
+            >
+              <img
+                src="https://via.placeholder.com/40"
+                alt="Icon"
+                class="h-10 w-10"
+              />
+              <div>
+                <h3 class="text-lg font-bold text-gray-800">
+                  Tổng kết báo cáo công nợ
+                </h3>
+                <p class="text-gray-600 text-sm">
+                  Dễ dàng kiểm soát số dư công nợ của khách hàng và nhà cung
+                  cấp.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex-1 mt-12 md:mt-0 xs:mt-4 flex justify-end">
+            <img
+              src="../assets/contents/ban-hang-1.png"
+              alt="Dashboard"
+              class="w-full max-w-md"
+            />
+          </div>
+        </div>
+
+        <div class="text-center mt-12">
+          <button
+            class="bg-eec733 text-white py-4 px-6 rounded-md text-lg font-bold"
+          >
+            Dùng Thử Miễn Phí
+          </button>
+        </div>
+      </div>
+
+      <hr />
+
+      <!--  -->
+      <div class="max-w-5xl mx-auto p-8 pt-16">
+        <h2 class="text-center text-2xl font-normal mb-8">
+          Lợi ích cho hộ kinh doanh và cộng đồng
+        </h2>
+        <div class="grid grid-cols-2 md:grid-cols-2 gap-16 xs:flex xs:gap-8">
+          <div>
+            <h3 class="text-center text-base font-normal mb-4">
+              Đối với hộ kinh doanh
+            </h3>
+            <div
+              class="active-line border-yellow-400 border-t-2 w-1/2 mx-auto mb-6"
+            ></div>
+          </div>
+
+          <div>
+            <h3 class="text-center text-base font-normal mb-4">
+              Đối với khách hàng
+            </h3>
+            <div
+              class="active-line border-white border-t-2 w-1/2 mx-auto mb-6"
+            ></div>
+          </div>
+        </div>
+
+        <div class="owl-carousel block">
+          <div class="owl-stage-outer">
+            <div class="owl-stage">
+              <!-- Carousel Item 1 -->
+              <div class="owl-item w-full">
+                <div class="flex gap-16 xs:flex-col xs:gap-4">
+                  <!-- Column 1 -->
+                  <ul class="space-y-6">
+                    <li class="flex items-start">
+                      <svg
+                        class="w-6 h-6 text-green-500 mt-1 mr-4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M5 13l4 4L19 7"
+                        ></path>
+                      </svg>
+                      <div>
+                        <h4 class="text-xl font-semibold">
+                          Duy trì kênh bán hàng truyền thống
+                        </h4>
+                        <p class="text-gray-700">
+                          Bán hàng truyền thống là một trong những cách bán hàng
+                          không thể thiếu và vẫn chiếm phần lớn thị trường.
+                        </p>
+                      </div>
+                    </li>
+                    <li class="flex items-start">
+                      <svg
+                        class="w-6 h-6 text-green-500 mt-1 mr-4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M5 13l4 4L19 7"
+                        ></path>
+                      </svg>
+                      <div>
+                        <h4 class="text-xl font-semibold">
+                          Hạn chế thất thoát, sai sót
+                        </h4>
+                        <p class="text-gray-700">
+                          Luôn cập nhật số tồn kho và dòng tiền thực tế và đối
+                          chiếu với nhân sự theo từng ca làm việc.
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                  <!-- Column 2 -->
+                  <ul class="space-y-6">
+                    <li class="flex items-start">
+                      <svg
+                        class="w-6 h-6 text-green-500 mt-1 mr-4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M5 13l4 4L19 7"
+                        ></path>
+                      </svg>
+                      <div>
+                        <h4 class="text-xl font-semibold">
+                          Tiết kiệm thời gian ghi chép và tính toán
+                        </h4>
+                        <p class="text-gray-700">
+                          Thay vì tốn nhiều thời gian vào việc thủ công, chủ hộ
+                          kinh doanh có thể dành thời gian vào việc phát triển
+                          kinh doanh
+                        </p>
+                      </div>
+                    </li>
+                    <li class="flex items-start">
+                      <svg
+                        class="w-6 h-6 text-green-500 mt-1 mr-4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M5 13l4 4L19 7"
+                        ></path>
+                      </svg>
+                      <div>
+                        <h4 class="text-xl font-semibold">
+                          Vận hành kinh doanh mọi lúc, mọi nơi
+                        </h4>
+                        <p class="text-gray-700">
+                          Theo dõi tình hình kinh doanh real-time ngay trên điện
+                          thoại của bạn
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- Carousel Item 2 (Repeat or adjust content as needed) -->
+              <div class="owl-item w-full">
+                <div class="flex gap-16 xs:flex-col xs:gap-4">
+                  <!-- Column 1 -->
+                  <ul class="space-y-6">
+                    <li class="flex items-start">
+                      <svg
+                        class="w-6 h-6 text-green-500 mt-1 mr-4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M5 13l4 4L19 7"
+                        ></path>
+                      </svg>
+                      <div>
+                        <h4 class="text-xl font-semibold">
+                          Tối ưu trải nghiệm khách hàng
+                        </h4>
+                        <p class="text-gray-700">
+                          Mang lại trải nghiệm mua sắm mượt mà và cá nhân hóa
+                          cho từng khách hàng.
+                        </p>
+                      </div>
+                    </li>
+                    <li class="flex items-start">
+                      <svg
+                        class="w-6 h-6 text-green-500 mt-1 mr-4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M5 13l4 4L19 7"
+                        ></path>
+                      </svg>
+                      <div>
+                        <h4 class="text-xl font-semibold">
+                          Nhanh chóng thanh toán đơn mua
+                        </h4>
+                        <p class="text-gray-700">
+                          Thanh toán dễ dàng và nhanh chóng, giúp bạn tiết kiệm
+                          thời gian trong mọi giao dịch.
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                  <!-- Column 2 -->
+                  <ul class="space-y-6">
+                    <li class="flex items-start">
+                      <svg
+                        class="w-6 h-6 text-green-500 mt-1 mr-4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M5 13l4 4L19 7"
+                        ></path>
+                      </svg>
+                      <div>
+                        <h4 class="text-xl font-semibold">
+                          Hưởng lợi ích đặc quyền từ hộ kinh doanh
+                        </h4>
+                        <p class="text-gray-700">
+                          Nhận ngay những ưu đãi và dịch vụ độc quyền khi giao
+                          dịch với hộ kinh doanh.
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--  -->
+      <div
+        class="p-10 mx-auto"
+        style="
+          background: rgb(238, 199, 51);
+          background: linear-gradient(
+            90deg,
+            rgba(238, 199, 51, 1) 40%,
+            rgba(251, 177, 116, 1) 70%
+          );
+        "
+      >
+        <div
+          class="flex justify-between items-center gap-4 p-10 max-w-5xl mx-auto xs:flex-col-reverse xs:p-0"
+        >
+          <div class="text-white xs:text-center">
+            <h1
+              class="flex flex-col gap-4 text-5xl font-bold mb-4 xs:text-center xs:text-3xl"
+            >
+              <span>Thử dùng MIỄN PHÍ,</span>
+              <span>Tội chi không thử?</span>
+            </h1>
+            <button
+              class="bg-white text-black font-semibold py-2 px-4 rounded-lg shadow-md my-4"
+            >
+              Dùng thử miễn phí
+            </button>
+            <p class="text-lg mt-2">12,000đ/ngày/6 người dùng</p>
+          </div>
+          <div
+            class="flex gap-8 flex-col justify-center text-white text-center xs:gap-4"
+          >
+            <div class="mb-4">
+              <span class="text-4xl font-bold">0đ</span>
+              <p>trải nghiệm 30 ngày</p>
+            </div>
+            <div class="mb-4">
+              <span class="text-4xl font-bold">1</span>
+              <p>phút đăng ký</p>
+            </div>
+            <div>
+              <span class="text-4xl font-bold">9</span>
+              <p>phút thành thạo</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--  -->
+      <div class="max-w-5xl mx-auto p-6 xs:mt-8">
+        <h2 class="text-2xl font-bold text-center mb-8">
+          Tìm hiểu tại sao họ kinh doanh nên duy trì bán hàng truyền thống
+        </h2>
+        <div class="grid grid-cols-4 gap-4 xs:flex xs:flex-col">
+          <!-- Product Cards -->
+          <div class="col-span-3 grid grid-cols-3 gap-4 xs:flex xs:flex-col">
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <img
+                src="https://via.placeholder.com/400x200"
+                alt="Product"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-4">
+                <h3 class="text-eec733 font-semibold mb-2">HỘ KINH DOANH</h3>
+                <p class="font-bold text-gray-900 mb-2">
+                  Kinh Nghiệm Mở Cửa Hàng Dành Cho...
+                </p>
+                <p class="text-gray-700 text-sm mb-4">
+                  Mở cửa hàng kinh doanh là một trong những hướng đi được nhiều
+                  người theo đuổi, bởi đây được xem là 'miếng bánh' hấp dẫn
+                  bởi...
+                </p>
+                <a href="#" class="text-blue-500 font-semibold">Xem bài viết</a>
+              </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <img
+                src="https://via.placeholder.com/400x200"
+                alt="Product"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-4">
+                <h3 class="text-eec733 font-semibold mb-2">HỘ KINH DOANH</h3>
+                <p class="font-bold text-gray-900 mb-2">
+                  Kinh Nghiệm Mở Cửa Hàng Dành Cho...
+                </p>
+                <p class="text-gray-700 text-sm mb-4">
+                  Mở cửa hàng kinh doanh là một trong những hướng đi được nhiều
+                  người theo đuổi, bởi đây được xem là 'miếng bánh' hấp dẫn
+                  bởi...
+                </p>
+                <a href="#" class="text-blue-500 font-semibold">Xem bài viết</a>
+              </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <img
+                src="https://via.placeholder.com/400x200"
+                alt="Product"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-4">
+                <h3 class="text-eec733 font-semibold mb-2">HỘ KINH DOANH</h3>
+                <p class="font-bold text-gray-900 mb-2">
+                  Kinh Nghiệm Mở Cửa Hàng Dành Cho...
+                </p>
+                <p class="text-gray-700 text-sm mb-4">
+                  Mở cửa hàng kinh doanh là một trong những hướng đi được nhiều
+                  người theo đuổi, bởi đây được xem là 'miếng bánh' hấp dẫn
+                  bởi...
+                </p>
+                <a href="#" class="text-blue-500 font-semibold">Xem bài viết</a>
+              </div>
+            </div>
+          </div>
+          <!-- Side Card -->
+          <div class="flex justify-center items-center">
+            <div
+              class="bg-yellow-500 rounded-lg p-10 text-center text-white font-semibold xs:px-3 xs:py-4"
+            >
+              <a href="#" class="text-xl">Xem thêm ➔</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--  -->
+      <div class="mx-auto bg-fbd965 p-10 shadow-md xs:p-4 xs:mt-6">
+        <div
+          class="max-w-5xl mx-auto grid grid-cols-2 gap-8 items-center xs:flex xs:flex-col xs:gap-4 md:flex md:flex-col md:gap-4"
+        >
+          <!-- Left Section -->
+          <div class="text-center">
+            <h2 class="text-3xl font-bold mb-4 text-white xs:text-2xl">
+              Công cụ 5-trong-1 duy nhất <br />dành cho Hộ Kinh Doanh!
+            </h2>
+            <img
+              src="../assets/contents/form.png"
+              alt="Happy Woman"
+              class="mx-auto rounded xs:hidden md:hidden max-w-sm"
+            />
+          </div>
+
+          <!-- Right Section (Form) -->
+          <div class="bg-white p-8 rounded-lg shadow-md xs:p-4">
+            <h3 class="text-xl font-semibold mb-4 text-gray-800 text-center">
+              Cần tư vấn thêm về nền tảng <br />
+              <span class="text-yellow-400">HKDO (hokinhdoanhonline)</span>?
+            </h3>
+            <form action="#" method="POST" class="space-y-4">
+              <input
+                type="text"
+                placeholder="Tên của bạn"
+                class="w-full p-2 border rounded-lg xs:text-sm"
+              />
+              <input
+                type="email"
+                placeholder="Email của bạn"
+                class="w-full p-2 border rounded-lg xs:text-sm"
+              />
+              <input
+                type="text"
+                placeholder="Số điện thoại"
+                class="w-full p-2 border rounded-lg xs:text-sm"
+              />
+              <input
+                type="text"
+                placeholder="Tên cửa hàng"
+                class="w-full p-2 border rounded-lg xs:text-sm"
+              />
+              <textarea
+                placeholder="Nội dung cần tư vấn"
+                class="w-full p-2 border rounded-lg xs:text-sm"
+              ></textarea>
+              <button
+                type="submit"
+                class="bg-yellow-500 text-white font-semibold py-2 px-4 rounded-lg w-full"
+              >
+                Tư vấn Miễn phí
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div class="text-center mt-8">
+          <p class="text-5xl font-semibold text-white xs:text-2xl">
+            Cần hỏi nhanh? Zalo ngay!
+            <span
+              class="inline-block bg-white text-blue-500 font-semibold p-2 rounded-full shadow-md ml-2"
+              >Zalo</span
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+    <footer></footer>
+  </body>
+</html>
+<script>
+  $(document).ready(function () {
+    var owl = $(".owl-carousel");
+    owl.owlCarousel({
+      items: 1,
+      loop: true,
+      margin: 10,
+      autoplay: true,
+      autoplayTimeout: 3500,
+    });
+    owl.on("changed.owl.carousel", function (event) {
+      const activeLines = $(".active-line");
+      for (let index = 0; index < activeLines.length; index++) {
+        if (event.item.index - 2 == index) {
+          $(activeLines[index]).remove("border-white");
+          $(activeLines[index]).addClass("border-yellow-400");
+        } else {
+          $(activeLines[index]).removeClass("border-yellow-400");
+          $(activeLines[index]).addClass("border-white");
+        }
+      }
+    });
+  });
+
+  function scrollToSection(id) {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+</script>
