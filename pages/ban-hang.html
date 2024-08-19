@@ -34,36 +34,50 @@
           extend: {
             screens: {
               xs: { max: "639px" },
-              md: { min: "740px", max: "1023px" },
+              // md: { min: "740px", max: "1023px" },
             },
           },
         },
       };
     </script>
-    <link rel="stylesheet" href="../css/styles/index.css">
+    <link rel="stylesheet" href="../css/styles/index.css" />
     <title>Bán Hàng</title>
   </head>
   <body>
     <header>
       <div class="w-full flex justify-between items-center px-7">
         <div class="h-20">
-            <img class="h-20" src="./assets/logos/logo.png" alt="logo">
+          <img class="h-20" src="../assets/logos/logo.png" alt="logo" />
         </div>
-        <label for="menu" class="flex flex-col gap-y-1 md:hidden lg:hidden">
+        <label for="menu" class="flex flex-col gap-y-1 md:hidden">
           <span class="w-6 h-1 bg-black block rounded-lg"></span>
           <span class="w-6 h-1 bg-black block rounded-lg"></span>
           <span class="w-6 h-1 bg-black block rounded-lg"></span>
         </label>
-        <input name="menu" id="menu" type="checkbox" hidden>
-        <nav class="fixed md:static lg:static bg-yellow-400 md:bg-white lg:bg-white top-0 left-0 right-0 min-h-screen md:min-h-0 lg:min-h-0 md:top-auto lg:top-auto md:left-auto lg:left-auto md:right-auto lg:right-auto md:w-auto md:h-auto lg:h-auto flex flex-col md:flex-row lg:flex-row items-center gap-3 text-xl md:text-base lg:text-base px-3 md:px-0 lg:px-0">
-            <label for="menu" class="text-4xl text-right w-full block md:hidden lg:hidden">&times;</label>
-            <a class="px-2 pb-1_5 text-black nav_link active" href="">Giới thiệu</a>
-            <a class="px-2 pb-1_5 text-black nav_link" href="">Chức năng</a>
-            <a class="px-2 pb-1_5 text-black nav_link" href="">Báo giá</a>
-            <a class="px-2 pb-1_5 text-black nav_link" href="">36 Ngành nghề</a>
-            <a class="px-2 pb-1_5 text-black nav_link" href="">Kiến thức</a>
-            <a class="px-3 py-1 md:py-0 lg:py-0 text-black overflow-hidden border-solid border-2 border-[#bababa] rounded bg-[#e3e3e3] text-center w-full md:w-auto lg:w-auto" href="">Tư vấn</a>
-            <a class="px-2 py-1 md:py-0 lg:py-0 text-[#f0e0b2] overflow-hidden border-solid border-2 border-[#bababa] rounded bg-[#e8b931] text-center w-full md:w-auto lg:w-auto" href="">Đăng ký</a>
+        <input name="menu" id="menu" type="checkbox" hidden />
+        <nav
+          class="fixed md:static bg-yellow-400 md:bg-white top-0 left-0 right-0 min-h-screen md:min-h-0 md:top-auto md:left-auto md:right-auto md:w-auto md:h-auto flex flex-col md:flex-row items-center gap-3 text-xl md:text-base px-3 md:px-0"
+        >
+          <label for="menu" class="text-4xl text-right w-full block md:hidden"
+            >&times;</label
+          >
+          <a class="px-2 pb-1_5 text-black nav_link active" href=""
+            >Giới thiệu</a
+          >
+          <a class="px-2 pb-1_5 text-black nav_link" href="">Chức năng</a>
+          <a class="px-2 pb-1_5 text-black nav_link" href="">Báo giá</a>
+          <a class="px-2 pb-1_5 text-black nav_link" href="">36 Ngành nghề</a>
+          <a class="px-2 pb-1_5 text-black nav_link" href="">Kiến thức</a>
+          <a
+            class="px-3 py-1 md:py-0 text-black overflow-hidden border-solid border-2 border-[#bababa] rounded bg-[#e3e3e3] text-center w-full md:w-auto"
+            href=""
+            >Tư vấn</a
+          >
+          <a
+            class="px-2 py-1 md:py-0 text-[#f0e0b2] overflow-hidden border-solid border-2 border-[#bababa] rounded bg-[#e8b931] text-center w-full md:w-auto"
+            href=""
+            >Đăng ký</a
+          >
         </nav>
       </div>
     </header>
@@ -91,7 +105,7 @@
           >
           <div class="flex gap-8 xs:grid xs:grid-cols-2 xs:grid-rows-3">
             <div
-              class="flex flex-col gap-2 items-center p-4 rounded-lg bg-eec733 border-black w-[110px]"
+              class="flex flex-col gap-2 items-center p-4 rounded-lg bg-[#eec733] border-black w-[110px]"
             >
               <img
                 class="w-12 h-12"
@@ -266,7 +280,7 @@
 
         <div class="text-center mt-12">
           <button
-            class="bg-eec733 text-white py-4 px-6 rounded-md text-lg font-bold"
+            class="bg-[#eec733] text-white py-4 px-6 rounded-md text-lg font-bold"
           >
             Dùng Thử Miễn Phí
           </button>
@@ -555,7 +569,7 @@
       </div>
 
       <!--  -->
-      <div class="max-w-5xl mx-auto p-6 xs:mt-8">
+      <div class="max-w-5xl mx-auto p-6 lg:mt-8 xs:mt-8 mb-8">
         <h2 class="text-2xl font-bold text-center mb-8">
           Tìm hiểu tại sao họ kinh doanh nên duy trì bán hàng truyền thống
         </h2>
@@ -630,21 +644,22 @@
           </div>
         </div>
       </div>
-
       <!--  -->
-      <div class="mx-auto bg-fbd965 p-10 shadow-md xs:p-4 xs:mt-6">
+      <div class="mx-auto bg-[#fbd965] p-10 shadow-md xs:p-4 xs:mt-6">
         <div
-          class="max-w-5xl mx-auto grid grid-cols-2 gap-8 items-center xs:flex xs:flex-col xs:gap-4 md:flex md:flex-col md:gap-4"
+          class="max-w-5xl mx-auto lg:grid lg:grid-cols-2 gap-8 items-center xs:flex xs:flex-col xs:gap-4 md:flex md:flex-col md:gap-4"
         >
           <!-- Left Section -->
           <div class="text-center">
-            <h2 class="text-3xl font-bold mb-4 text-white xs:text-2xl">
+            <h2
+              class="text-3xl font-bold mb-4 lg:text-white xs:text-2xl md:text-black"
+            >
               Công cụ 5-trong-1 duy nhất <br />dành cho Hộ Kinh Doanh!
             </h2>
             <img
               src="../assets/contents/form.png"
               alt="Happy Woman"
-              class="mx-auto rounded xs:hidden md:hidden max-w-sm"
+              class="mx-auto rounded xs:hidden md:hidden lg:block max-w-sm"
             />
           </div>
 
@@ -689,14 +704,13 @@
           </div>
         </div>
 
-        <div class="text-center mt-8">
+        <div class="text-center mt-8 flex justify-center items-center">
           <p class="text-5xl font-semibold text-white xs:text-2xl">
             Cần hỏi nhanh? Zalo ngay!
-            <span
-              class="inline-block bg-white text-blue-500 font-semibold p-2 rounded-full shadow-md ml-2"
-              >Zalo</span
-            >
           </p>
+          <a href="https://zalo.me/2613090557211314383">
+            <img src="../assets/images/zalo.png" alt="" width="80" />
+          </a>
         </div>
       </div>
     </div>
