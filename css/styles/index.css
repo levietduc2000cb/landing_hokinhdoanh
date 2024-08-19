@@ -23,137 +23,137 @@ body {
 }
 .feature_title:hover ~ .feture_background {
   background-color: #eff0f25f;
-  * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  /* Class thêm */
-  nav .active,
-  nav .nav_link:hover {
-    background-color: #f5f5f5;
-    border-radius: 5px;
-  }
-  /* Thuộc tính thêm */
-  .pb-1_5 {
-    padding-block: 1.5px;
-  }
-  .bg-f5f5f5 {
-    background-color: #f5f5f5;
-  }
-  .bg-e3e3e3 {
-    background-color: #e3e3e3;
-  }
-  .bg-e8b931 {
-    background-color: #e8b931;
-  }
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* Class thêm */
+nav .active,
+nav .nav_link:hover {
+  background-color: #f5f5f5;
+  border-radius: 5px;
+}
+/* Thuộc tính thêm */
+.pb-1_5 {
+  padding-block: 1.5px;
+}
+.bg-f5f5f5 {
+  background-color: #f5f5f5;
+}
+.bg-e3e3e3 {
+  background-color: #e3e3e3;
+}
+.bg-e8b931 {
+  background-color: #e8b931;
+}
 
-  .bg-eec733 {
-    background-color: #eec733;
-  }
+.bg-eec733 {
+  background-color: #eec733;
+}
 
-  .text-eec733 {
-    color: #eec733;
-  }
-  .bg-fbd965 {
-    background-color: #fbd965;
-  }
-  .border-bababa {
-    border-color: #bababa !important;
-  }
-  .text-f0e0b2 {
-    color: #f0e0b2;
-  }
+.text-eec733 {
+  color: #eec733;
+}
+.bg-fbd965 {
+  background-color: #fbd965;
+}
+.border-bababa {
+  border-color: #bababa !important;
+}
+.text-f0e0b2 {
+  color: #f0e0b2;
+}
 
-  /* Hiệu ứng slide */
-  .slide_home .slide_content {
-    transform: translateX(-100%);
-    transition: all 1s ease-in;
-  }
-  .slide_home .slide_image {
-    transition: all 0.7s ease-in;
-  }
-  .slide_home .slide_content:nth-child(1) {
-    opacity: 0;
-  }
-  .slide_home .slide_content:nth-child(2) {
-    opacity: 1;
-  }
-  .slide_home .slide_content:nth-child(n + 3) {
-    opacity: 0;
-  }
-  .slide_home .slide_image:nth-child(1) {
-    left: -100%;
-  }
-  .slide_home .slide_image:nth-child(2) {
-    left: 0;
-  }
-  .slide_home .slide_image:nth-child(n + 3) {
-    left: 100%;
-  }
-  /* Hiệu ứng hover đổi icon */
-  .business_item > .icon_circle_checked_2 {
-    display: block;
-  }
-  .business_item > .icon_circle_checked_3 {
-    display: none;
-  }
-  .business_item.active {
-    background-color: #eec733;
-    color: white;
-  }
-  .business_item.active > .icon_circle_checked_2,
-  .business_item:hover > .icon_circle_checked_2 {
-    display: none;
-  }
-  .business_item.active > .icon_circle_checked_3,
-  .business_item:hover > .icon_circle_checked_3 {
-    display: block;
-  }
-  /* Chạy slide vô tận */
-  .slide_infinity {
+/* Hiệu ứng slide */
+.slide_home .slide_content {
+  transform: translateX(-100%);
+  transition: all 1s ease-in;
+}
+.slide_home .slide_image {
+  transition: all 0.7s ease-in;
+}
+.slide_home .slide_content:nth-child(1) {
+  opacity: 0;
+}
+.slide_home .slide_content:nth-child(2) {
+  opacity: 1;
+}
+.slide_home .slide_content:nth-child(n + 3) {
+  opacity: 0;
+}
+.slide_home .slide_image:nth-child(1) {
+  left: -100%;
+}
+.slide_home .slide_image:nth-child(2) {
+  left: 0;
+}
+.slide_home .slide_image:nth-child(n + 3) {
+  left: 100%;
+}
+/* Hiệu ứng hover đổi icon */
+.business_item > .icon_circle_checked_2 {
+  display: block;
+}
+.business_item > .icon_circle_checked_3 {
+  display: none;
+}
+.business_item.active {
+  background-color: #eec733;
+  color: white;
+}
+.business_item.active > .icon_circle_checked_2,
+.business_item:hover > .icon_circle_checked_2 {
+  display: none;
+}
+.business_item.active > .icon_circle_checked_3,
+.business_item:hover > .icon_circle_checked_3 {
+  display: block;
+}
+/* Chạy slide vô tận */
+.slide_infinity {
+  transform: translateX(0);
+}
+.slide_infinity:nth-child(1) {
+  animation: slide_move 20s linear infinite;
+}
+.slide_infinity:nth-child(2) {
+  animation: slide_move 20s linear infinite;
+}
+@keyframes slide_move {
+  0% {
     transform: translateX(0);
   }
-  .slide_infinity:nth-child(1) {
-    animation: slide_move 20s linear infinite;
+  100% {
+    transform: translateX(-100%);
   }
-  .slide_infinity:nth-child(2) {
-    animation: slide_move 20s linear infinite;
-  }
-  @keyframes slide_move {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
+}
 
-  @media only screen and (max-width: 768px) {
-    /* Menu navigation mobile */
-    #menu ~ nav {
-      display: none;
-    }
-    #menu:checked ~ nav {
-      display: flex;
-    }
-    /* Other */
-    .feature_title ~ .feture_des {
-      opacity: 1;
-      transform: translateX(0px);
-    }
-    .feature_title ~ .feture_background {
-      background-color: #eff0f25f;
-    }
-    .feature_title ~ .feture_des.transition_left {
-      transform: translateX(0px);
-    }
-    .feature_title ~ .feture_des.transition_right {
-      transform: translateX(0px);
-    }
-    .feature_title ~ .feture_background {
-      background-color: #eff0f25f;
-    }
-    /* Hiệu ứng slide */
+@media only screen and (max-width: 768px) {
+  /* Menu navigation mobile */
+  #menu ~ nav {
+    display: none;
   }
+  #menu:checked ~ nav {
+    display: flex;
+  }
+  /* Other */
+  .feature_title ~ .feture_des {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  .feature_title ~ .feture_background {
+    background-color: #eff0f25f;
+  }
+  .feature_title ~ .feture_des.transition_left {
+    transform: translateX(0px);
+  }
+  .feature_title ~ .feture_des.transition_right {
+    transform: translateX(0px);
+  }
+  .feature_title ~ .feture_background {
+    background-color: #eff0f25f;
+  }
+  /* Hiệu ứng slide */
 }
