@@ -40,7 +40,11 @@
         },
       };
     </script>
-    <link rel="stylesheet" href="../css/styles/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script defer src="../index.js"></script>
     <title>Bán Hàng</title>
   </head>
   <body>
@@ -105,55 +109,55 @@
           >
           <div class="flex gap-8 xs:grid xs:grid-cols-2 xs:grid-rows-3">
             <div
-              class="flex flex-col gap-2 items-center p-4 rounded-lg bg-[#eec733] border-black w-[110px]"
+              class="flex flex-col items-center p-4 rounded-lg bg-yellow-300 border-black w-[110px]"
             >
               <img
-                class="w-12 h-12"
-                src="https://images2.thanhnien.vn/528068263637045248/2024/1/25/e093e9cfc9027d6a142358d24d2ee350-65a11ac2af785880-17061562929701875684912.jpg"
+                class="w-14 h-14"
+                src="../assets/icons/icon-banner-1.png"
                 alt=""
               />
               <span class="font-medium text-sm">Bán thực</span>
             </div>
 
             <div
-              class="flex flex-col gap-2 items-center p-4 rounded-lg bg-white border-black w-[110px]"
+              class="flex flex-col items-center p-4 rounded-lg bg-white border-black w-[110px]"
             >
               <img
-                class="w-12 h-12"
-                src="https://images2.thanhnien.vn/528068263637045248/2024/1/25/e093e9cfc9027d6a142358d24d2ee350-65a11ac2af785880-17061562929701875684912.jpg"
+                class="w-14 h-14"
+                src="../assets/icons/icon-banner-2.png"
                 alt=""
               />
               <span class="font-medium text-sm">Kế toán</span>
             </div>
 
             <div
-              class="flex flex-col gap-2 items-center p-4 rounded-lg bg-white border-black w-[110px]"
+              class="flex flex-col items-center p-4 rounded-lg bg-white border-black w-[110px]"
             >
               <img
-                class="w-12 h-12"
-                src="https://images2.thanhnien.vn/528068263637045248/2024/1/25/e093e9cfc9027d6a142358d24d2ee350-65a11ac2af785880-17061562929701875684912.jpg"
+                class="w-14 h-14"
+                src="../assets/icons/icon-banner-3.png"
                 alt=""
               />
               <span class="font-medium text-sm">Bán Online</span>
             </div>
 
             <div
-              class="flex flex-col gap-2 items-center p-4 rounded-lg bg-white border-black w-[110px]"
+              class="flex flex-col items-center p-4 rounded-lg bg-white border-black w-[110px]"
             >
               <img
-                class="w-12 h-12"
-                src="https://images2.thanhnien.vn/528068263637045248/2024/1/25/e093e9cfc9027d6a142358d24d2ee350-65a11ac2af785880-17061562929701875684912.jpg"
+                class="w-14 h-14"
+                src="../assets/icons/icon-banner-4.png"
                 alt=""
               />
               <span class="font-medium text-sm">Gọi ship</span>
             </div>
 
             <div
-              class="flex flex-col gap-2 items-center p-4 rounded-lg bg-white border-black w-[110px] xs:col-span-2 xs:justify-self-center"
+              class="flex flex-col items-center p-4 rounded-lg bg-white border-black w-[110px] xs:col-span-2 xs:justify-self-center"
             >
               <img
-                class="w-12 h-12"
-                src="https://images2.thanhnien.vn/528068263637045248/2024/1/25/e093e9cfc9027d6a142358d24d2ee350-65a11ac2af785880-17061562929701875684912.jpg"
+                class="w-14 h-14"
+                src="../assets/icons/icon-banner-5.png"
                 alt=""
               />
               <span class="font-medium text-sm">Đô thị</span>
@@ -163,7 +167,7 @@
       </section>
 
       <!--  -->
-      <div class="max-w-5xl mx-auto p-8 pb-16" id="quan-ly-ban-hang">
+      <div class="max-w-7xl mx-auto p-8 pb-12">
         <div class="text-center">
           <h1 class="text-2xl font-bold text-gray-800 mb-2">Tất cả những gì</h1>
           <span>hộ kinh doanh</span>
@@ -177,16 +181,17 @@
         >
           <div class="flex-1 space-y-4">
             <div
-              class="bg-gray-100 shadow-md cursor-pointer p-4 rounded-md flex items-start space-x-4"
-              onclick="scrollToSection('quan-ly-ban-hang')"
+              class="group hover:bg-gray-100 hover:shadow-md p-4 rounded-md flex items-start space-x-4 item-hover forcus-feature"
             >
               <img
-                src="https://via.placeholder.com/40"
+                src="../assets/icons/icon-1.png"
                 alt="Icon"
                 class="h-10 w-10"
               />
               <div>
-                <h3 class="text-lg font-bold text-yellow-500">
+                <h3
+                  class="text-lg font-bold group-hover:text-yellow-500 text-hover forcus-text-feature"
+                >
                   Quản lý bán hàng, giao hàng
                 </h3>
                 <p class="text-gray-600 text-sm">
@@ -195,16 +200,17 @@
               </div>
             </div>
             <div
-              class="hover:bg-gray-100 hover:shadow-md hover:cursor-pointer p-4 flex items-start space-x-4"
-              onclick="scrollToSection('quan-ly-thu-chi')"
+              class="group hover:bg-gray-100 hover:shadow-md p-4 flex items-start space-x-4 item-hover"
             >
               <img
-                src="https://via.placeholder.com/40"
+                src="../assets/icons/icon-2.png"
                 alt="Icon"
                 class="h-10 w-10"
               />
               <div>
-                <h3 class="text-lg font-bold text-gray-800">
+                <h3
+                  class="text-lg font-bold text-gray-800 group-hover:text-yellow-500 text-hover"
+                >
                   Quản lý thu tiền, chi tiền
                 </h3>
                 <p class="text-gray-600 text-sm">
@@ -213,16 +219,17 @@
               </div>
             </div>
             <div
-              class="hover:bg-gray-100 hover:shadow-md hover:cursor-pointer p-4 flex items-start space-x-4"
-              onclick="scrollToSection('quan-ly-hang-hoa')"
+              class="group hover:bg-gray-100 hover:shadow-md p-4 flex items-start space-x-4 item-hover"
             >
               <img
-                src="https://via.placeholder.com/40"
+                src="../assets/icons/icon-3.png"
                 alt="Icon"
                 class="h-10 w-10"
               />
               <div>
-                <h3 class="text-lg font-bold text-gray-800">
+                <h3
+                  class="text-lg font-bold text-gray-800 group-hover:text-yellow-500 text-hover"
+                >
                   Quản lý hàng hoá
                 </h3>
                 <p class="text-gray-600 text-sm">
@@ -231,16 +238,17 @@
               </div>
             </div>
             <div
-              class="hover:bg-gray-100 hover:shadow-md hover:cursor-pointer p-4 flex items-start space-x-4"
-              onclick="scrollToSection('theo-doi-bao-cao')"
+              class="group hover:bg-gray-100 hover:shadow-md p-4 flex items-start space-x-4 item-hover"
             >
               <img
-                src="https://via.placeholder.com/40"
+                src="../assets/icons/icon-4.png"
                 alt="Icon"
                 class="h-10 w-10"
               />
               <div>
-                <h3 class="text-lg font-bold text-gray-800">
+                <h3
+                  class="text-lg font-bold text-gray-800 group-hover:text-yellow-500 text-hover"
+                >
                   Theo dõi báo cáo kinh doanh
                 </h3>
                 <p class="text-gray-600 text-sm">
@@ -249,16 +257,17 @@
               </div>
             </div>
             <div
-              class="hover:bg-gray-100 hover:shadow-md hover:cursor-pointer p-4 flex items-start space-x-4"
-              onclick="scrollToSection('tong-ket-bao-cao')"
+              class="group hover:bg-gray-100 hover:shadow-md p-4 flex items-start space-x-4 item-hover"
             >
               <img
-                src="https://via.placeholder.com/40"
+                src="../assets/icons/icon-5.png"
                 alt="Icon"
                 class="h-10 w-10"
               />
               <div>
-                <h3 class="text-lg font-bold text-gray-800">
+                <h3
+                  class="text-lg font-bold text-gray-800 group-hover:text-yellow-500 text-hover"
+                >
                   Tổng kết báo cáo công nợ
                 </h3>
                 <p class="text-gray-600 text-sm">
@@ -269,16 +278,19 @@
             </div>
           </div>
 
-          <div class="flex-1 mt-12 md:mt-0 xs:mt-4 flex justify-end">
+          <div
+            class="flex-1 mt-12 md:mt-0 xs:mt-4 flex justify-end animation__backInRight"
+          >
             <img
               src="../assets/contents/ban-hang-1.png"
               alt="Dashboard"
               class="w-full max-w-md"
+              id="change-image"
             />
           </div>
         </div>
 
-        <div class="text-center mt-12">
+        <div class="text-center mt-6">
           <button
             class="bg-[#eec733] text-white py-4 px-6 rounded-md text-lg font-bold"
           >
@@ -290,13 +302,15 @@
       <hr />
 
       <!--  -->
-      <div class="max-w-5xl mx-auto p-8 pt-16">
+      <div class="max-w-7xl mx-auto p-8 pt-12">
         <h2 class="text-center text-2xl font-normal mb-8">
           Lợi ích cho hộ kinh doanh và cộng đồng
         </h2>
         <div class="grid grid-cols-2 md:grid-cols-2 gap-16 xs:flex xs:gap-8">
           <div>
-            <h3 class="text-center text-base font-normal mb-4">
+            <h3
+              class="text-center text-base font-normal mb-4 cursor-pointer to-owl-page"
+            >
               Đối với hộ kinh doanh
             </h3>
             <div
@@ -305,7 +319,9 @@
           </div>
 
           <div>
-            <h3 class="text-center text-base font-normal mb-4">
+            <h3
+              class="text-center text-base font-normal mb-4 cursor-pointer to-owl-page"
+            >
               Đối với khách hàng
             </h3>
             <div
@@ -533,11 +549,11 @@
         "
       >
         <div
-          class="flex justify-between items-center gap-4 p-10 max-w-5xl mx-auto xs:flex-col-reverse xs:p-0"
+          class="flex justify-between items-center gap-4 p-10 max-w-7xl mx-auto xs:flex-col-reverse xs:p-0 xs:gap-4"
         >
           <div class="text-white xs:text-center">
             <h1
-              class="flex flex-col gap-4 text-5xl font-bold mb-4 xs:text-center xs:text-3xl"
+              class="flex flex-col gap-4 text-5xl font-bold mb-4 xs:text-center xs:text-3xl tracking-widest xs:tracking-normal"
             >
               <span>Thử dùng MIỄN PHÍ,</span>
               <span>Tội chi không thử?</span>
@@ -552,15 +568,15 @@
           <div
             class="flex gap-8 flex-col justify-center text-white text-center xs:gap-4"
           >
-            <div class="mb-4">
+            <div class="mb-4 tracking-widest">
               <span class="text-4xl font-bold">0đ</span>
               <p>trải nghiệm 30 ngày</p>
             </div>
-            <div class="mb-4">
+            <div class="mb-4 tracking-widest">
               <span class="text-4xl font-bold">1</span>
               <p>phút đăng ký</p>
             </div>
-            <div>
+            <div class="tracking-widest">
               <span class="text-4xl font-bold">9</span>
               <p>phút thành thạo</p>
             </div>
@@ -569,7 +585,7 @@
       </div>
 
       <!--  -->
-      <div class="max-w-5xl mx-auto p-6 lg:mt-8 xs:mt-8 mb-8">
+      <div class="max-w-7xl mx-auto p-6 lg:mt-8 xs:mt-8 mb-8">
         <h2 class="text-2xl font-bold text-center mb-8">
           Tìm hiểu tại sao họ kinh doanh nên duy trì bán hàng truyền thống
         </h2>
@@ -647,13 +663,11 @@
       <!--  -->
       <div class="mx-auto bg-[#fbd965] p-10 shadow-md xs:p-4 xs:mt-6">
         <div
-          class="max-w-5xl mx-auto lg:grid lg:grid-cols-2 gap-8 items-center xs:flex xs:flex-col xs:gap-4 md:flex md:flex-col md:gap-4"
+          class="max-w-7xl mx-auto lg:grid lg:grid-cols-2 gap-8 items-center xs:flex xs:flex-col xs:gap-4 md:flex md:flex-col md:gap-4"
         >
           <!-- Left Section -->
           <div class="text-center">
-            <h2
-              class="text-3xl font-bold mb-4 lg:text-white xs:text-2xl md:text-black"
-            >
+            <h2 class="text-3xl font-bold mb-4 text-white xs:text-2xl">
               Công cụ 5-trong-1 duy nhất <br />dành cho Hộ Kinh Doanh!
             </h2>
             <img
@@ -705,7 +719,7 @@
         </div>
 
         <div class="text-center mt-8 flex justify-center items-center">
-          <p class="text-5xl font-semibold text-white xs:text-2xl">
+          <p class="lg:text-5xl font-semibold text-white xs:text-xl">
             Cần hỏi nhanh? Zalo ngay!
           </p>
           <a href="https://zalo.me/2613090557211314383">
@@ -725,7 +739,7 @@
       loop: true,
       margin: 10,
       autoplay: true,
-      autoplayTimeout: 3500,
+      autoplayTimeout: 4500,
     });
     owl.on("changed.owl.carousel", function (event) {
       const activeLines = $(".active-line");
@@ -739,12 +753,65 @@
         }
       }
     });
+
+    const owlPages = $(".to-owl-page");
+
+    for (let index = 0; index < owlPages.length; index++) {
+      $(owlPages[index]).on("click", function () {
+        toOwlPage(index);
+      });
+    }
+
+    function toOwlPage(page) {
+      $(".owl-carousel").trigger("to.owl.carousel", [page, 300]);
+    }
   });
 
-  function scrollToSection(id) {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+  const hoverItems = document.querySelectorAll(".item-hover");
+  const changeImageEl = document.getElementById("change-image");
+  const hoverTextItems = document.querySelectorAll(".text-hover");
+  for (let index = 0; index < hoverItems.length; index++) {
+    if (screen.width <= 639) {
+      hoverItems[index].addEventListener("click", () => {
+        resetCss();
+        changeImageEl.src = "";
+        hoverItems[index].classList.add("forcus-feature");
+        hoverTextItems[index].classList.add("forcus-text-feature");
+        changeImageEl.classList.remove("animation__backInRight");
+
+        // Trigger reflow
+        void changeImageEl.offsetWidth;
+
+        // Re-add the class
+        changeImageEl.classList.add("animation__backInRight");
+        changeImageEl.src = `../assets/contents/ban-hang-${index + 1}.png`;
+      });
+    } else {
+      hoverItems[index].addEventListener("mouseenter", () => {
+        resetCss();
+        changeImageEl.src = "";
+        hoverItems[index].classList.add("forcus-feature");
+        hoverTextItems[index].classList.add("forcus-text-feature");
+        changeImageEl.classList.remove("animation__backInRight");
+
+        // Trigger reflow
+        void changeImageEl.offsetWidth;
+
+        // Re-add the class
+        changeImageEl.classList.add("animation__backInRight");
+        changeImageEl.src = `../assets/contents/ban-hang-${index + 1}.png`;
+      });
+    }
+  }
+
+  function resetCss() {
+    const forcusFeature = document.querySelector(".forcus-feature");
+
+    const textForcusFeature = document.querySelector(".forcus-text-feature");
+
+    if (forcusFeature && textForcusFeature) {
+      forcusFeature.classList.remove("forcus-feature");
+      textForcusFeature.classList.remove("forcus-text-feature");
     }
   }
 </script>
