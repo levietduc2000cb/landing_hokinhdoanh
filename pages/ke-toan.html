@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/styles/index.css" />
+    <link rel="stylesheet" href="../css/styles/ban-hang.css" />
+    <link
+      rel="stylesheet"
+      href="../libs/OwlCarousel/dist/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../libs/OwlCarousel/dist/assets/owl.theme.default.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="../libs/OwlCarousel/dist/owl.carousel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        mode: "jit",
+        theme: {
+          extend: {
+            screens: {
+              xs: { max: "639px" },
+              // md: { min: "740px", max: "1023px" },
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script defer src="../index.js"></script>
+    <title>Kế toán</title>
+  </head>
+  <body>
+    <header>
+      <div class="w-full flex justify-between items-center px-7">
+        <div class="h-20">
+          <img class="h-20" src="../assets/logos/logo.png" alt="logo" />
+        </div>
+        <label for="menu" class="flex flex-col gap-y-1 md:hidden">
+          <span class="w-6 h-1 bg-black block rounded-lg"></span>
+          <span class="w-6 h-1 bg-black block rounded-lg"></span>
+          <span class="w-6 h-1 bg-black block rounded-lg"></span>
+        </label>
+        <input name="menu" id="menu" type="checkbox" hidden />
+        <nav
+          class="fixed md:static bg-yellow-400 md:bg-white top-0 left-0 right-0 min-h-screen md:min-h-0 md:top-auto md:left-auto md:right-auto md:w-auto md:h-auto flex flex-col md:flex-row items-center gap-3 text-xl md:text-base px-3 md:px-0"
+        >
+          <label for="menu" class="text-4xl text-right w-full block md:hidden"
+            >&times;</label
+          >
+          <a class="px-2 pb-1_5 text-black nav_link active" href=""
+            >Giới thiệu</a
+          >
+          <a class="px-2 pb-1_5 text-black nav_link" href="">Chức năng</a>
+          <a class="px-2 pb-1_5 text-black nav_link" href="">Báo giá</a>
+          <a class="px-2 pb-1_5 text-black nav_link" href="">36 Ngành nghề</a>
+          <a class="px-2 pb-1_5 text-black nav_link" href="">Kiến thức</a>
+          <a
+            class="px-3 py-1 md:py-0 text-black overflow-hidden border-solid border-2 border-[#bababa] rounded bg-[#e3e3e3] text-center w-full md:w-auto"
+            href=""
+            >Tư vấn</a
+          >
+          <a
+            class="px-2 py-1 md:py-0 text-[#f0e0b2] overflow-hidden border-solid border-2 border-[#bababa] rounded bg-[#e8b931] text-center w-full md:w-auto"
+            href=""
+            >Đăng ký</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <!-- container -->
+    <div>
+      <!--  -->
+      <section
+        class="py-12 pt-0 xs:pb-[150px]"
+        style="
+          background-image: url('../assets/banners/ban-hang.png');
+          background-size: cover;
+          background-repeat: no-repeat;
+        "
+      >
+        <div
+          class="flex flex-col justify-center items-center gap-8 pt-12 pb-6 xs:gap-4 xs:px-4"
+        >
+          <h1 class="font-semibold text-[46px] xs:text-4xl xs:text-center">
+            Làm kế toán dễ như chơi
+          </h1>
+          <span class="xs:text-center xs:text-sm">Đi kèm bán hàng - Không cần nghiệp vụ!</span>
+          <div class="flex gap-8 xs:grid xs:grid-cols-2 xs:grid-rows-3">
+            <div
+              class="flex flex-col items-center p-4 rounded-lg bg-yellow-300 border-black w-[110px]"
+            >
+              <img
+                class="w-14 h-14"
+                src="../assets/icons/icon-banner-1.png"
+                alt=""
+              />
+              <span class="font-medium text-sm">Bán thực</span>
+            </div>
+
+            <div
+              class="flex flex-col items-center p-4 rounded-lg bg-white border-black w-[110px]"
+            >
+              <img
+                class="w-14 h-14"
+                src="../assets/icons/icon-banner-2.png"
+                alt=""
+              />
+              <span class="font-medium text-sm">Kế toán</span>
+            </div>
+
+            <div
+              class="flex flex-col items-center p-4 rounded-lg bg-white border-black w-[110px]"
+            >
+              <img
+                class="w-14 h-14"
+                src="../assets/icons/icon-banner-3.png"
+                alt=""
+              />
+              <span class="font-medium text-sm">Bán Online</span>
+            </div>
+
+            <div
+              class="flex flex-col items-center p-4 rounded-lg bg-white border-black w-[110px]"
+            >
+              <img
+                class="w-14 h-14"
+                src="../assets/icons/icon-banner-4.png"
+                alt=""
+              />
+              <span class="font-medium text-sm">Gọi ship</span>
+            </div>
+
+            <div
+              class="flex flex-col items-center p-4 rounded-lg bg-white border-black w-[110px] xs:col-span-2 xs:justify-self-center"
+            >
+              <img
+                class="w-14 h-14"
+                src="../assets/icons/icon-banner-5.png"
+                alt=""
+              />
+              <span class="font-medium text-sm">Đô thị</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--  -->
+      <div class="max-w-7xl mx-auto p-8 pb-12">
+        <div class="text-center">
+          <h1 class="text-2xl font-bold text-gray-800 mb-2">Tất cả những gì</h1>
+          <span>hộ kinh doanh</span>
+          <h2 class="text-xl font-semibold text-gray-800 mt-2">
+            cần để vận hành kinh doanh
+          </h2>
+        </div>
+
+        <div
+          class="flex xs:flex-col gap-2 items-center justify-between md:flex-row mt-8"
+        >
+          <div class="flex-1 space-y-4">
+            <div
+              class="group hover:bg-gray-100 hover:shadow-md p-4 rounded-md flex items-start space-x-4 item-hover forcus-feature"
+            >
+              <img
+                src="../assets/icons/ban-hang-1.png"
+                alt="Icon"
+                class="h-10 w-10"
+              />
+              <div>
+                <h3
+                  class="text-lg font-bold group-hover:text-yellow-500 text-hover forcus-text-feature"
+                >
+                  Sổ kế toán tự động
+                </h3>
+                <p class="text-gray-600 text-sm">
+                  Tất cả dữ liệu mua bán đều được tự động tính toán vào các mẫu số theo chuẩn <a href="/"><i>Thông tư 88/2021-BTC</i></a>
+                </p>
+              </div>
+            </div>
+            <div
+              class="group hover:bg-gray-100 hover:shadow-md p-4 flex items-start space-x-4 item-hover"
+            >
+              <img
+                src="../assets/icons/ban-hang-2.png"
+                alt="Icon"
+                class="h-10 w-10"
+              />
+              <div>
+                <h3
+                  class="text-lg font-bold text-gray-800 group-hover:text-yellow-500 text-hover"
+                >
+                  Báo cáo thuế chuẩn mẫu
+                </h3>
+                <p class="text-gray-600 text-sm">
+                  Tự động sinh tờ khai thuế theo <a href="/"><i>Thông tư 40/2021-BTC</i></a>
+                </p>
+              </div>
+            </div>
+            <div
+              class="group hover:bg-gray-100 hover:shadow-md p-4 flex items-start space-x-4 item-hover"
+            >
+              <img
+                src="../assets/icons/ban-hang-3.png"
+                alt="Icon"
+                class="h-10 w-10"
+              />
+              <div>
+                <h3
+                  class="text-lg font-bold text-gray-800 group-hover:text-yellow-500 text-hover"
+                >
+                  Xuất hoá đơn điện tử
+                </h3>
+                <p class="text-gray-600 text-sm">
+                  Dễ dàng liên kết với các nhà cung cấp hoá đơn điện tử MOBIFONE, Nacencomm, Viettel, VNPT
+                </p>
+              </div>
+            </div>
+            <div
+              class="group hover:bg-gray-100 hover:shadow-md p-4 flex items-start space-x-4 item-hover"
+            >
+              <img
+                src="../assets/icons/ban-hang-4.png"
+                alt="Icon"
+                class="h-10 w-10"
+              />
+              <div>
+                <h3
+                  class="text-lg font-bold text-gray-800 group-hover:text-yellow-500 text-hover"
+                >
+                  Quản lý trong tầm tay
+                </h3>
+                <p class="text-gray-600 text-sm">
+                  Nhập liệu và báo cáo ngay từ giao diện thiết kế riêng cho smartphone
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="flex-1 mt-12 md:mt-0 xs:mt-4 flex justify-end animation__backInRight"
+          >
+            <img
+              src="../assets/contents/ban-hang-1.png"
+              alt="Dashboard"
+              class="w-full max-w-md"
+              id="change-image"
+            />
+          </div>
+        </div>
+
+        <div class="text-center mt-6">
+          <button
+            class="bg-[#eec733] text-white py-4 px-6 rounded-md text-lg font-bold"
+          >
+            Dùng Thử Miễn Phí
+          </button>
+        </div>
+      </div>
+
+      <hr />
+
+      <!--  -->
+      <div class="max-w-7xl mx-auto p-8 pt-12">
+        <h2 class="text-center text-2xl font-normal mb-8">
+          Lợi ích cho tất cả mọi người
+        </h2>
+        <div class="grid grid-cols-2 md:grid-cols-2 gap-16 xs:flex xs:gap-8">
+          <div>
+            <h3
+              class="text-center text-base font-normal mb-4 cursor-pointer to-owl-page"
+            >
+              Đối với hộ kinh doanh
+            </h3>
+            <div
+              class="active-line border-yellow-400 border-t-2 w-1/2 mx-auto mb-6"
+            ></div>
+          </div>
+
+          <div>
+            <h3
+              class="text-center text-base font-normal mb-4 cursor-pointer to-owl-page"
+            >
+              Đối với khách hàng
+            </h3>
+            <div
+              class="active-line border-white border-t-2 w-1/2 mx-auto mb-6"
+            ></div>
+          </div>
+        </div>
+
+        <div class="owl-carousel block">
+          <div class="owl-stage-outer">
+            <div class="owl-stage">
+              <!-- Carousel Item 1 -->
+              <div class="owl-item w-full">
+                <div class="flex gap-16 xs:flex-col xs:gap-4">
+                  <!-- Column 1 -->
+                  <ul class="space-y-6">
+                    <li class="flex items-start">
+                      <svg
+                        class="w-6 h-6 text-green-500 mt-1 mr-4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M5 13l4 4L19 7"
+                        ></path>
+                      </svg>
+                      <div>
+                        <h4 class="text-xl font-semibold">
+                          Đáp ứng đủ yêu cầu của cơ quan nhà nước
+                        </h4>
+                        <p class="text-gray-700">
+                          Thông tư 88/2021-BTC, thông tư 40/2021-BTC, và thông tư 78/2021-BTC, dành cho hộ kinh doanh phương pháp kê khai
+                        </p>
+                      </div>
+                    </li>
+                    <li class="flex items-start">
+                      <svg
+                        class="w-6 h-6 text-green-500 mt-1 mr-4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M5 13l4 4L19 7"
+                        ></path>
+                      </svg>
+                      <div>
+                        <h4 class="text-xl font-semibold">
+                          Giảm tránh sai sót thủ công   
+                        </h4>
+                        <p class="text-gray-700">
+                          Dữ liệu tự động tính toán vào các mẫu sổ theo chuẩn mẫu sổ kế toán và mẫu báo cáo thuế
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                  <!-- Column 2 -->
+                  <ul class="space-y-6">
+                    <li class="flex items-start">
+                      <svg
+                        class="w-6 h-6 text-green-500 mt-1 mr-4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M5 13l4 4L19 7"
+                        ></path>
+                      </svg>
+                      <div>
+                        <h4 class="text-xl font-semibold">
+                          Tiết kiệm thời gian
+                        </h4>
+                        <p class="text-gray-700">
+                          Thay vì tốn nhiều thời gian vào việc thủ công, chủ hộ
+                          kinh doanh có thể dành thời gian vào việc phát triển
+                          kinh doanh
+                        </p>
+                      </div>
+                    </li>
+                    <li class="flex items-start">
+                      <svg
+                        class="w-6 h-6 text-green-500 mt-1 mr-4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M5 13l4 4L19 7"
+                        ></path>
+                      </svg>
+                      <div>
+                        <h4 class="text-xl font-semibold">
+                          Giảm chi phí nhân sự kế toán
+                        </h4>
+                        <p class="text-gray-700">
+                          Phần mềm dễ dùng theo quy trình mua bán hàng hàng ngày, không cần nghiệp vụ kế toán chuyên sâu
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- Carousel Item 2 (Repeat or adjust content as needed) -->
+              <div class="owl-item w-full">
+                <div class="flex gap-16 xs:flex-col xs:gap-4">
+                  <!-- Column 1 -->
+                  <ul class="space-y-6">
+                    <li class="flex items-start">
+                      <svg
+                        class="w-6 h-6 text-green-500 mt-1 mr-4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M5 13l4 4L19 7"
+                        ></path>
+                      </svg>
+                      <div>
+                        <h4 class="text-xl font-semibold">
+                          Tối ưu trải nghiệm khách hàng
+                        </h4>
+                        <p class="text-gray-700">
+                          Mang lại trải nghiệm mua sắm mượt mà và cá nhân hóa
+                          cho từng khách hàng.
+                        </p>
+                      </div>
+                    </li>
+                    <li class="flex items-start">
+                      <svg
+                        class="w-6 h-6 text-green-500 mt-1 mr-4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M5 13l4 4L19 7"
+                        ></path>
+                      </svg>
+                      <div>
+                        <h4 class="text-xl font-semibold">
+                          Nhanh chóng thanh toán đơn mua
+                        </h4>
+                        <p class="text-gray-700">
+                          Thanh toán dễ dàng và nhanh chóng, giúp bạn tiết kiệm
+                          thời gian trong mọi giao dịch.
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                  <!-- Column 2 -->
+                  <ul class="space-y-6">
+                    <li class="flex items-start">
+                      <svg
+                        class="w-6 h-6 text-green-500 mt-1 mr-4"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M5 13l4 4L19 7"
+                        ></path>
+                      </svg>
+                      <div>
+                        <h4 class="text-xl font-semibold">
+                          Nhận hoá đơn điện tử, hoá đơn khởi tạo từ máy tính tiền
+                        </h4>
+                        <p class="text-gray-700">
+                          Nhanh chóng nhận được hoá đơn điện tử từ hộ kinh doanh chỉ vài giây sau khi mua hàng
+                        </p>
+                      </div>
+                    </li>
+                    <li class="flex items-start">
+                        <svg
+                          class="w-6 h-6 text-green-500 mt-1 mr-4"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M5 13l4 4L19 7"
+                          ></path>
+                        </svg>
+                        <div>
+                          <h4 class="text-xl font-semibold">
+                            Yên tâm mua hàng
+                          </h4>
+                          <p class="text-gray-700">
+                            Thông tin về cửa hàng và sản phẩm đều được xác thực
+                          </p>
+                        </div>
+                      </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--  -->
+      <div
+        class="p-10 mx-auto"
+        style="
+          background: rgb(238, 199, 51);
+          background: linear-gradient(
+            90deg,
+            rgba(238, 199, 51, 1) 40%,
+            rgba(251, 177, 116, 1) 70%
+          );
+        "
+      >
+        <div
+          class="flex justify-between items-center gap-4 p-10 max-w-7xl mx-auto xs:flex-col-reverse xs:p-0 xs:gap-4"
+        >
+          <div class="text-white xs:text-center">
+            <h1
+              class="flex flex-col gap-4 text-5xl font-bold mb-4 xs:text-center xs:text-3xl tracking-widest xs:tracking-normal"
+            >
+              <span>Thử dùng MIỄN PHÍ,</span>
+              <span>Tội chi không thử?</span>
+            </h1>
+            <button
+              class="bg-white text-black font-semibold py-2 px-4 rounded-lg shadow-md my-4"
+            >
+              Dùng thử miễn phí
+            </button>
+            <p class="text-lg mt-2">12,000đ/ngày/6 người dùng</p>
+          </div>
+          <div
+            class="flex gap-8 flex-col justify-center text-white text-center xs:gap-4"
+          >
+            <div class="mb-4 tracking-widest">
+              <span class="text-4xl font-bold">0đ</span>
+              <p>trải nghiệm 30 ngày</p>
+            </div>
+            <div class="mb-4 tracking-widest">
+              <span class="text-4xl font-bold">1</span>
+              <p>phút đăng ký</p>
+            </div>
+            <div class="tracking-widest">
+              <span class="text-4xl font-bold">9</span>
+              <p>phút thành thạo</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--  -->
+      <div class="max-w-7xl mx-auto p-6 lg:mt-8 xs:mt-8 mb-8">
+        <h2 class="text-2xl font-bold text-center mb-8">
+          Tìm hiểu tại sao họ kinh doanh nên duy trì bán hàng truyền thống
+        </h2>
+        <div class="grid grid-cols-4 gap-4 xs:flex xs:flex-col">
+          <!-- Product Cards -->
+          <div class="col-span-3 grid grid-cols-3 gap-4 xs:flex xs:flex-col">
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <img
+                src="https://via.placeholder.com/400x200"
+                alt="Product"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-4">
+                <h3 class="text-eec733 font-semibold mb-2">HỘ KINH DOANH</h3>
+                <p class="font-bold text-gray-900 mb-2">
+                  Kinh Nghiệm Mở Cửa Hàng Dành Cho...
+                </p>
+                <p class="text-gray-700 text-sm mb-4">
+                  Mở cửa hàng kinh doanh là một trong những hướng đi được nhiều
+                  người theo đuổi, bởi đây được xem là 'miếng bánh' hấp dẫn
+                  bởi...
+                </p>
+                <a href="#" class="text-blue-500 font-semibold">Xem bài viết</a>
+              </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <img
+                src="https://via.placeholder.com/400x200"
+                alt="Product"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-4">
+                <h3 class="text-eec733 font-semibold mb-2">HỘ KINH DOANH</h3>
+                <p class="font-bold text-gray-900 mb-2">
+                  Kinh Nghiệm Mở Cửa Hàng Dành Cho...
+                </p>
+                <p class="text-gray-700 text-sm mb-4">
+                  Mở cửa hàng kinh doanh là một trong những hướng đi được nhiều
+                  người theo đuổi, bởi đây được xem là 'miếng bánh' hấp dẫn
+                  bởi...
+                </p>
+                <a href="#" class="text-blue-500 font-semibold">Xem bài viết</a>
+              </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <img
+                src="https://via.placeholder.com/400x200"
+                alt="Product"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-4">
+                <h3 class="text-eec733 font-semibold mb-2">HỘ KINH DOANH</h3>
+                <p class="font-bold text-gray-900 mb-2">
+                  Kinh Nghiệm Mở Cửa Hàng Dành Cho...
+                </p>
+                <p class="text-gray-700 text-sm mb-4">
+                  Mở cửa hàng kinh doanh là một trong những hướng đi được nhiều
+                  người theo đuổi, bởi đây được xem là 'miếng bánh' hấp dẫn
+                  bởi...
+                </p>
+                <a href="#" class="text-blue-500 font-semibold">Xem bài viết</a>
+              </div>
+            </div>
+          </div>
+          <!-- Side Card -->
+          <div class="flex justify-center items-center">
+            <div
+              class="bg-yellow-500 rounded-lg p-10 text-center text-white font-semibold xs:px-3 xs:py-4"
+            >
+              <a href="#" class="text-xl">Xem thêm ➔</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  -->
+      <div class="mx-auto bg-[#fbd965] p-10 shadow-md xs:p-4 xs:mt-6">
+        <div
+          class="max-w-7xl mx-auto lg:grid lg:grid-cols-2 gap-8 items-center xs:flex xs:flex-col xs:gap-4 md:flex md:flex-col md:gap-4"
+        >
+          <!-- Left Section -->
+          <div class="text-center">
+            <h2 class="text-3xl font-bold mb-4 text-white xs:text-2xl">
+              Công cụ 5-trong-1 duy nhất <br />dành cho Hộ Kinh Doanh!
+            </h2>
+            <img
+              src="../assets/contents/form.png"
+              alt="Happy Woman"
+              class="mx-auto rounded xs:hidden md:hidden lg:block max-w-sm"
+            />
+          </div>
+
+          <!-- Right Section (Form) -->
+          <div class="bg-white p-8 rounded-lg shadow-md xs:p-4">
+            <h3 class="text-xl font-semibold mb-4 text-gray-800 text-center">
+              Cần tư vấn thêm về nền tảng <br />
+              <span class="text-yellow-400">HKDO (hokinhdoanhonline)</span>?
+            </h3>
+            <form action="#" method="POST" class="space-y-4">
+              <input
+                type="text"
+                placeholder="Tên của bạn"
+                class="w-full p-2 border rounded-lg xs:text-sm"
+              />
+              <input
+                type="email"
+                placeholder="Email của bạn"
+                class="w-full p-2 border rounded-lg xs:text-sm"
+              />
+              <input
+                type="text"
+                placeholder="Số điện thoại"
+                class="w-full p-2 border rounded-lg xs:text-sm"
+              />
+              <input
+                type="text"
+                placeholder="Tên cửa hàng"
+                class="w-full p-2 border rounded-lg xs:text-sm"
+              />
+              <textarea
+                placeholder="Nội dung cần tư vấn"
+                class="w-full p-2 border rounded-lg xs:text-sm"
+              ></textarea>
+              <button
+                type="submit"
+                class="bg-yellow-500 text-white font-semibold py-2 px-4 rounded-lg w-full"
+              >
+                Tư vấn Miễn phí
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div class="text-center mt-8 flex justify-center items-center">
+          <p class="lg:text-5xl font-semibold text-white xs:text-xl">
+            Cần hỏi nhanh? Zalo ngay!
+          </p>
+          <a href="https://zalo.me/2613090557211314383">
+            <img src="../assets/images/zalo.png" alt="" width="80" />
+          </a>
+        </div>
+      </div>
+    </div>
+    <footer></footer>
+  </body>
+</html>
+<script>
+  $(document).ready(function () {
+    var owl = $(".owl-carousel");
+    owl.owlCarousel({
+      items: 1,
+      loop: true,
+      margin: 10,
+      autoplay: true,
+      autoplayTimeout: 4500,
+    });
+    owl.on("changed.owl.carousel", function (event) {
+      const activeLines = $(".active-line");
+      for (let index = 0; index < activeLines.length; index++) {
+        if (event.item.index - 2 == index) {
+          $(activeLines[index]).remove("border-white");
+          $(activeLines[index]).addClass("border-yellow-400");
+        } else {
+          $(activeLines[index]).removeClass("border-yellow-400");
+          $(activeLines[index]).addClass("border-white");
+        }
+      }
+    });
+
+    const owlPages = $(".to-owl-page");
+
+    for (let index = 0; index < owlPages.length; index++) {
+      $(owlPages[index]).on("click", function () {
+        toOwlPage(index);
+      });
+    }
+
+    function toOwlPage(page) {
+      $(".owl-carousel").trigger("to.owl.carousel", [page, 300]);
+    }
+  });
+
+  const hoverItems = document.querySelectorAll(".item-hover");
+  const changeImageEl = document.getElementById("change-image");
+  const hoverTextItems = document.querySelectorAll(".text-hover");
+  for (let index = 0; index < hoverItems.length; index++) {
+    if (screen.width <= 639) {
+      hoverItems[index].addEventListener("click", () => {
+        resetCss();
+        changeImageEl.src = "";
+        hoverItems[index].classList.add("forcus-feature");
+        hoverTextItems[index].classList.add("forcus-text-feature");
+        changeImageEl.classList.remove("animation__backInRight");
+
+        // Trigger reflow
+        void changeImageEl.offsetWidth;
+
+        // Re-add the class
+        changeImageEl.classList.add("animation__backInRight");
+        changeImageEl.src = `../assets/contents/ban-hang-${index + 1}.png`;
+      });
+    } else {
+      hoverItems[index].addEventListener("mouseenter", () => {
+        resetCss();
+        changeImageEl.src = "";
+        hoverItems[index].classList.add("forcus-feature");
+        hoverTextItems[index].classList.add("forcus-text-feature");
+        changeImageEl.classList.remove("animation__backInRight");
+
+        // Trigger reflow
+        void changeImageEl.offsetWidth;
+
+        // Re-add the class
+        changeImageEl.classList.add("animation__backInRight");
+        changeImageEl.src = `../assets/contents/ban-hang-${index + 1}.png`;
+      });
+    }
+  }
+
+  function resetCss() {
+    const forcusFeature = document.querySelector(".forcus-feature");
+
+    const textForcusFeature = document.querySelector(".forcus-text-feature");
+
+    if (forcusFeature && textForcusFeature) {
+      forcusFeature.classList.remove("forcus-feature");
+      textForcusFeature.classList.remove("forcus-text-feature");
+    }
+  }
+</script>
