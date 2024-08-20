@@ -38,14 +38,14 @@ document.addEventListener('DOMContentLoaded', function () {
     arrowLeft.addEventListener("click",(e)=>{
         let slideContent = document.querySelectorAll(".slide_content");
         let slideImage = document.querySelectorAll(".slide_image");
-        slideContentWrapper.append(slideContent[0]);
-        slideImageWrapper.append(slideImage[0]);
+        slideContentWrapper.prepend(slideContent[slideContent.length - 1]);
+        slideImageWrapper.prepend(slideImage[slideImage.length - 1]);
     });
     arrowRight.addEventListener("click",(e)=>{
         let slideContent = document.querySelectorAll(".slide_content");
         let slideImage = document.querySelectorAll(".slide_image");
-        slideContentWrapper.prepend(slideContent[slideContent.length - 1]);
-        slideImageWrapper.prepend(slideImage[slideImage.length - 1]);
+        slideContentWrapper.append(slideContent[0]);
+        slideImageWrapper.append(slideImage[0]);
     });
 
     //Lướt từ trái sang phải và từ phải sang trái
