@@ -14,8 +14,26 @@ function countUp(element, start, end, duration) {
         }
     }, stepTime);
 }
+
+
 document.addEventListener('DOMContentLoaded', function () {
+    //Chạy tự động tiêu đề
+    let features = document.querySelector("#features");
+    let featureTitleIndex = 0;
+    let runCarouselFeatureTitle;
+    let featureTitles = document.querySelectorAll(".feature_title");
+    let featureTitlesLength = featureTitles.length;
+    //Chạy đếm
     let counters = document.querySelectorAll('.counter');
+    //Slide trang home
+    let slideContentWrapper = document.querySelector(".slide_content_wrapper");
+    let slideImageWrapper = document.querySelector(".slide_image_wrapper");
+    let arrowLeft = document.querySelector("#arrow_left");
+    let arrowRight = document.querySelector("#arrow_right");
+    //Lướt từ trái sang phải và từ phải sang trái
+    let animationSwipeRights = document.querySelectorAll('.animation_swipe_right');
+    let animationSwipeLefts = document.querySelectorAll('.animation_swipe_left');
+    // Khác
     let observer = new IntersectionObserver(function(entries) {
         entries.forEach(function(entry) {
             if (entry.isIntersecting) {
@@ -31,10 +49,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     //SLide trang Home
-    let slideContentWrapper = document.querySelector(".slide_content_wrapper");
-    let slideImageWrapper = document.querySelector(".slide_image_wrapper");
-    let arrowLeft = document.querySelector("#arrow_left");
-    let arrowRight = document.querySelector("#arrow_right");
     arrowLeft.addEventListener("click",(e)=>{
         let slideContent = document.querySelectorAll(".slide_content");
         let slideImage = document.querySelectorAll(".slide_image");
@@ -49,8 +63,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     //Lướt từ trái sang phải và từ phải sang trái
-    let animationSwipeRights = document.querySelectorAll('.animation_swipe_right');
-    let animationSwipeLefts = document.querySelectorAll('.animation_swipe_left');
     let observerAnimationSwipe = new IntersectionObserver(function(entries) {
         entries.forEach(function(entry) {
             if (entry.isIntersecting) {
@@ -70,4 +82,57 @@ document.addEventListener('DOMContentLoaded', function () {
     animationSwipeLefts.forEach(function(animationSwipe) {
         observerAnimationSwipe.observe(animationSwipe);
     });
+
+    //Tự động chạy tiêu đề các tính năng
+    function carouselFeatureTitle(featureTitleIndex){
+        featureTitles.forEach((featureTitle,index)=>{
+            if(index === featureTitleIndex){
+                featureTitle.classList.add("active");
+            }else{
+                featureTitle.classList.remove("active");
+            }
+        })
+    }
+    function handleRunCarouselFeatureTitle(){
+        runCarouselFeatureTitle = setInterval(()=>{
+            if(featureTitleIndex == featureTitlesLength - 1 || featureTitleIndex >= featureTitlesLength - 1){
+                featureTitleIndex = 0;
+            }else{
+                featureTitleIndex += 1;
+            }
+            carouselFeatureTitle(featureTitleIndex);
+        },2000);
+    }
+    featureTitles.forEach((featureTitle, index)=>{
+        featureTitle.addEventListener("mouseover",(event)=>{
+            if(runCarouselFeatureTitle){
+                clearInterval(runCarouselFeatureTitle);
+                featureTitleIndex = index;
+                carouselFeatureTitle(featureTitleIndex);
+            }
+        })
+
+        featureTitle.addEventListener("mouseout",(event)=>{
+            if(featureTitleIndex == featureTitlesLength - 1 || featureTitleIndex >= featureTitlesLength - 1){
+                featureTitleIndex = 0;
+            }else{
+                featureTitleIndex += 1;
+            }
+            carouselFeatureTitle(featureTitleIndex);
+            handleRunCarouselFeatureTitle();
+        })
+    })
+
+    let featuresObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                let element = entry.target;
+                featureTitleIndex = 0;
+                carouselFeatureTitle(featureTitleIndex);
+                handleRunCarouselFeatureTitle();
+                featuresObserver.unobserve(element); // Ngừng quan sát sau khi hiệu ứng đã chạy
+            }
+        });
+    });
+    featuresObserver.observe(features);
 });

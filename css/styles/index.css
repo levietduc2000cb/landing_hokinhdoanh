@@ -21,7 +21,14 @@ html{
     transition: all 0.3s ease-in;
 }
 .feature_title:hover ~ .feture_background{
-    background-color: #eff0f25f;
+    background-color: #eff0f285;
+}
+.feature_title.active ~ .feture_des{
+    opacity: 1;
+    transform: translateX(0px);
+}
+.feature_title.active ~ .feture_background{
+    background-color: #eff0f285;
 }
 .swipe_right_to_left{
     animation: swipeRightToLeft ease-in-out 2s forwards;
