@@ -128,7 +128,7 @@
                 Quản lý bán hàng, giao hàng
               </h3>
               <p
-                class="text-gray-600 text-sm opacity-0 transform scale-90 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300">
+                class="text-gray-600 text-sm transform group-hover:opacity-100 transition-all duration-300 opacity-100 focus-sub-content">
                 Số hoá công việc theo dõi hoạt động bán hàng
               </p>
             </div>
@@ -140,7 +140,7 @@
                 Quản lý thu tiền, chi tiền
               </h3>
               <p
-                class="text-gray-600 text-sm opacity-0 transform scale-90 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300">
+                class="text-gray-600 text-sm opacity-0 transform  group-hover:opacity-100  transition-all duration-300 focus-sub-content">
                 Tự động tính toán doanh thu và dòng tiền mỗi ngày.
               </p>
             </div>
@@ -152,7 +152,7 @@
                 Quản lý hàng hoá
               </h3>
               <p
-                class="text-gray-600 text-sm opacity-0 transform scale-90 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300">
+                class="text-gray-600 text-sm opacity-0 transform  group-hover:opacity-100  transition-all duration-300 focus-sub-content">
                 Dễ dàng quản lý hàng hoá và thông tin sản phẩm
               </p>
             </div>
@@ -164,7 +164,7 @@
                 Theo dõi báo cáo kinh doanh
               </h3>
               <p
-                class="text-gray-600 text-sm opacity-0 transform scale-90 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300">
+                class="text-gray-600 text-sm opacity-0 transform  group-hover:opacity-100  transition-all duration-300 focus-sub-content">
                 Nhìn nhanh các số liệu quan trọng trong ngày
               </p>
             </div>
@@ -176,7 +176,7 @@
                 Tổng kết báo cáo công nợ
               </h3>
               <p
-                class="text-gray-600 text-sm opacity-0 transform scale-90 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300">
+                class="text-gray-600 text-sm opacity-0 transform  group-hover:opacity-100  transition-all duration-300 focus-sub-content">
                 Dễ dàng kiểm soát số dư công nợ của khách hàng và nhà cung
                 cấp.
               </p>
@@ -637,13 +637,15 @@
   const hoverItems = document.querySelectorAll(".item-hover");
   const changeImageEl = document.getElementById("change-image");
   const hoverTextItems = document.querySelectorAll(".text-hover");
+  const focusSubContent = document.querySelectorAll('.focus-sub-content');
   for (let index = 0; index < hoverItems.length; index++) {
-    if (screen.width <= 639) {
+    if (screen.width < 1024) {
       hoverItems[index].addEventListener("click", () => {
         resetCss();
         changeImageEl.src = "";
         hoverItems[index].classList.add("forcus-feature");
         hoverTextItems[index].classList.add("forcus-text-feature");
+        focusSubContent[index].classList.add('opacity-100');
         changeImageEl.classList.remove("animation__backInRight");
 
         // Trigger reflow
@@ -659,6 +661,7 @@
         changeImageEl.src = "";
         hoverItems[index].classList.add("forcus-feature");
         hoverTextItems[index].classList.add("forcus-text-feature");
+        focusSubContent[index].classList.add('opacity-100');
         changeImageEl.classList.remove("animation__backInRight");
 
         // Trigger reflow
@@ -673,12 +676,14 @@
 
   function resetCss() {
     const forcusFeature = document.querySelector(".forcus-feature");
-
     const textForcusFeature = document.querySelector(".forcus-text-feature");
+    const focusSubContent = document.querySelector('.opacity-100');
 
-    if (forcusFeature && textForcusFeature) {
+    if (forcusFeature && textForcusFeature && focusSubContent) {
       forcusFeature.classList.remove("forcus-feature");
       textForcusFeature.classList.remove("forcus-text-feature");
+      focusSubContent.classList.remove("opacity-100");
+      focusSubContent.classList.add("opacity-0");
     }
   }
 </script>

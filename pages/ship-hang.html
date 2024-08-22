@@ -126,7 +126,9 @@
               <h3 class="text-lg font-bold group-hover:text-yellow-500 text-hover forcus-text-feature">
                 Gọi shipper gần nhất
               </h3>
-              <p class="text-gray-600 text-sm">Nhanh chóng kết nối với shipper trong khu vực. </p>
+              <p
+                class="text-gray-600 text-sm transform group-hover:opacity-100 transition-all duration-300 opacity-100 focus-sub-content">
+                Nhanh chóng kết nối với shipper trong khu vực. </p>
             </div>
           </div>
           <div class="group hover:bg-gray-100 hover:shadow-md p-4 flex items-start space-x-4 item-hover">
@@ -135,7 +137,9 @@
               <h3 class="text-lg font-bold text-gray-800 group-hover:text-yellow-500 text-hover">
                 Quản lý tình trạng giao hàng
               </h3>
-              <p class="text-gray-600 text-sm">Theo dõi từng bước của quá trình vận chuyển, từ khi đơn hàng được nhận
+              <p
+                class="text-gray-600 text-sm opacity-0 transform  group-hover:opacity-100  transition-all duration-300 focus-sub-content">
+                Theo dõi từng bước của quá trình vận chuyển, từ khi đơn hàng được nhận
                 đến khi giao thành công.</p>
             </div>
           </div>
@@ -145,7 +149,9 @@
               <h3 class="text-lg font-bold text-gray-800 group-hover:text-yellow-500 text-hover">
                 Gọi & Chat với khách và shipper
               </h3>
-              <p class="text-gray-600 text-sm">Kết nối trực tiếp với shipper & người mua giúp trải nghiệm mua hàng
+              <p
+                class="text-gray-600 text-sm opacity-0 transform  group-hover:opacity-100  transition-all duration-300 focus-sub-content">
+                Kết nối trực tiếp với shipper & người mua giúp trải nghiệm mua hàng
                 nhanh, gọn, nhẹ và tăng hiệu quả kinh doanh.</p>
             </div>
           </div>
@@ -155,7 +161,9 @@
               <h3 class="text-lg font-bold text-gray-800 group-hover:text-yellow-500 text-hover">
                 Đồng hợp hoá vận chuyển
               </h3>
-              <p class="text-gray-600 text-sm">Số liệu của các đơn vận chuyển được tổng hợp vào hệ thống báo cáo hộ kinh
+              <p
+                class="text-gray-600 text-sm opacity-0 transform  group-hover:opacity-100  transition-all duration-300 focus-sub-content">
+                Số liệu của các đơn vận chuyển được tổng hợp vào hệ thống báo cáo hộ kinh
                 doanh</p>
             </div>
           </div>
@@ -669,13 +677,15 @@
   const hoverItems = document.querySelectorAll(".item-hover");
   const changeImageEl = document.getElementById("change-image");
   const hoverTextItems = document.querySelectorAll(".text-hover");
+  const focusSubContent = document.querySelectorAll('.focus-sub-content');
   for (let index = 0; index < hoverItems.length; index++) {
-    if (screen.width <= 639) {
+    if (screen.width < 1024) {
       hoverItems[index].addEventListener("click", () => {
         resetCss();
         changeImageEl.src = "";
         hoverItems[index].classList.add("forcus-feature");
         hoverTextItems[index].classList.add("forcus-text-feature");
+        focusSubContent[index].classList.add('opacity-100');
         changeImageEl.classList.remove("animation__backInRight");
 
         // Trigger reflow
@@ -691,6 +701,7 @@
         changeImageEl.src = "";
         hoverItems[index].classList.add("forcus-feature");
         hoverTextItems[index].classList.add("forcus-text-feature");
+        focusSubContent[index].classList.add('opacity-100');
         changeImageEl.classList.remove("animation__backInRight");
 
         // Trigger reflow
@@ -698,19 +709,21 @@
 
         // Re-add the class
         changeImageEl.classList.add("animation__backInRight");
-        changeImageEl.src = `../assets/contents/ban-hang-${index + 1}.png`;
+        changeImageEl.src = `../assets/contents/ban-online-${index + 1}.png`;
       });
     }
   }
 
   function resetCss() {
     const forcusFeature = document.querySelector(".forcus-feature");
-
     const textForcusFeature = document.querySelector(".forcus-text-feature");
+    const focusSubContent = document.querySelector('.opacity-100');
 
-    if (forcusFeature && textForcusFeature) {
+    if (forcusFeature && textForcusFeature && focusSubContent) {
       forcusFeature.classList.remove("forcus-feature");
       textForcusFeature.classList.remove("forcus-text-feature");
+      focusSubContent.classList.remove("opacity-100");
+      focusSubContent.classList.add("opacity-0");
     }
   }
 </script>
