@@ -100,7 +100,7 @@ html{
 }
 /* Chạy slide vô tận */
 .scroll_infinity{
-    animation: scrollInfinity 10s linear infinite;
+    animation: scrollInfinity 60s linear infinite;
 }
 @keyframes scrollInfinity{
     0%{
