@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="../css/styles/index.css" />
+  <link rel="stylesheet" href="../css/styles/header.css">
   <link rel="stylesheet" href="../css/styles/ban-hang.css" />
   <link rel="stylesheet" href="../libs/OwlCarousel/dist/assets/owl.carousel.min.css" />
   <link rel="stylesheet" href="../libs/OwlCarousel/dist/assets/owl.theme.default.min.css" />
@@ -40,26 +41,69 @@
   <header>
     <div class="w-full flex justify-between items-center px-7">
       <div class="h-20 flex items-center">
-        <a href="/"><img class="h-12" src="../assets/logos/logo.png" alt="logo" /></a>
+          <a href="/"><img class="h-12" src="../assets/logos/logo.png" alt="logo"></a>
       </div>
-      <label for="menu" class="flex flex-col gap-y-1 md:hidden">
+      <label for="menu" class="flex flex-col gap-y-1 md:hidden lg:hidden">
         <span class="w-6 h-1 bg-black block rounded-lg"></span>
         <span class="w-6 h-1 bg-black block rounded-lg"></span>
         <span class="w-6 h-1 bg-black block rounded-lg"></span>
       </label>
-      <input name="menu" id="menu" type="checkbox" hidden />
-      <nav
-        class="fixed md:static bg-yellow-400 md:bg-white top-0 left-0 right-0 min-h-screen md:min-h-0 md:top-auto md:left-auto md:right-auto md:w-auto md:h-auto flex flex-col md:flex-row items-center gap-3 text-xl md:text-base px-3 md:px-0">
-        <label for="menu" class="text-4xl text-right w-full block md:hidden">&times;</label>
-        <a class="px-2 pb-1_5 text-black nav_link active" href="">Giới thiệu</a>
-        <a class="px-2 pb-1_5 text-black nav_link" href="">Chức năng</a>
-        <a class="px-2 pb-1_5 text-black nav_link" href="">Báo giá</a>
-        <a class="px-2 pb-1_5 text-black nav_link" href="">36 Ngành nghề</a>
-        <a class="px-2 pb-1_5 text-black nav_link" href="">Kiến thức</a>
-        <a class="px-3 py-1 md:py-0 text-black overflow-hidden border-solid border-2 border-[#bababa] rounded bg-[#e3e3e3] text-center w-full md:w-auto"
-          href="">Tư vấn</a>
-        <a class="px-2 py-1 md:py-0 text-[#f0e0b2] overflow-hidden border-solid border-2 border-[#bababa] rounded bg-[#e8b931] text-center w-full md:w-auto"
-          href="">Đăng ký</a>
+      <input name="menu" id="menu" type="checkbox" hidden>
+      <nav class="fixed overflow-auto md:overflow-visible md:static lg:static bg-yellow-400 md:bg-white lg:bg-white top-0 left-0 right-0 bottom-0 min-h-screen max-h-screen md:min-h-0 lg:min-h-0 md:top-auto lg:top-auto md:left-auto lg:left-auto md:right-auto lg:right-auto md:w-auto md:h-auto lg:h-auto flex flex-col md:flex-row lg:flex-row items-center gap-3 text-xl md:text-base lg:text-base px-3 md:px-0 lg:px-0 pb-6 md:pb-0">
+          <label for="menu" class="text-4xl text-right w-full block md:hidden lg:hidden">&times;</label>
+          <a class="px-2 pb-1_5 text-black nav_link active w-full text-left md:whitespace-nowrap" href="#introduce">Giới thiệu</a>
+          <div class="relative w-full md:w-auto nav_link">
+            <a class="px-2 pb-1_5 text-black w-full md:whitespace-nowrap" href="#">Chức năng</a>
+            <div class="static md:absolute top-[3.2rem] md:w-80 sub_nav">
+              <a href="/pages/ban-hang.html" class="whitespace-nowrap flex gap-x-3 px-2 md:px-4 justify-center items-center py-1 md:py-4 text-center rounded md:border md:border-gray-500 md:bg-white md:hover:bg-[#fbd965]">
+                <img class="hidden md:block" width="40" src="../assets/images/ban-thuc.png" alt="ban-thuc">
+                <div class="flex-1 text-left text-base md:text-lg">
+                  <p class="font-bold">Bán thực</p>
+                  <p>Quản lý Kế toán & Bán hàng</p>
+                </div>
+              </a>
+              <a href="/pages/ke-toan.html" class="whitespace-nowrap flex gap-x-3 px-2 md:px-4 justify-center items-center py-1 md:py-4 text-center rounded md:border md:border-gray-500 md:bg-white md:hover:bg-[#fbd965]">
+                <img class="hidden md:block" width="40" src="../assets/images/ke-toan.png" alt="ban-thuc">
+                <div class="flex-1 text-left text-base md:text-lg">
+                  <p class="font-bold">Kế toán</p>
+                  <p>Kế toán online & offline</p>
+                </div>
+              </a>
+              <a href="/pages/ban-online.html" class="whitespace-nowrap flex gap-x-3 px-2 md:px-4 justify-center items-center py-1 md:py-4 text-center rounded md:border md:border-gray-500 md:bg-white md:hover:bg-[#fbd965]">
+                <img class="hidden md:block" width="40" src="../assets/images/ban-online.png" alt="ban-thuc">
+                <div class="flex-1 text-left text-base md:text-lg">
+                  <p class="font-bold">Bán online</p>
+                  <p>Website riêng và bán online</p>
+                </div>
+              </a>
+              <a href="/pages/ship-hang.html" class="whitespace-nowrap flex gap-x-3 px-2 md:px-4 justify-center items-center py-1 md:py-4 text-center rounded md:border md:border-gray-500 md:bg-white md:hover:bg-[#fbd965]">
+                <img class="hidden md:block" width="40" src="../assets/images/goi-ship.png" alt="ban-thuc">
+                <div class="flex-1 text-left text-base md:text-lg">
+                  <p class="font-bold">Gọi ship</p>
+                  <p>Kết nối với ship khu vực</p>
+                </div>
+              </a>
+              <a href="https://dothithongminh1.vn/search" class="whitespace-nowrap flex flex-col gap-x-3 px-2 md:px-4 justify-center md:items-center py-1 md:py-4 text-center rounded md:border md:border-gray-500 md:bg-white md:hover:bg-[#fbd965]">
+                <img class="hidden md:block" width="40" src="../assets/logos/logo.png" alt="ban-thuc">
+                <div class="flex-1 text-left md:text-center text-base md:text-lg">
+                  <p class="font-bold">Đô thị thông minh</p>
+                  <p>Nền tảng kinh doanh toàn diện với<br/>đầy đủ chức năng trên</p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <a class="px-2 pb-1_5 text-black nav_link w-full text-left" href="#quote">Báo giá</a>
+          <div class="relative w-full md:w-auto nav_link">
+            <a href="#" class="block px-2 pb-1_5 text-black nav_link md:whitespace-nowrap">36 Ngành nghề</a>
+            <div class="static md:absolute top-[3.2rem] sub_nav">
+              <a href="/pages/nha-hang.html" class="whitespace-nowrap block px-2 py-2 md:px-6 md:py-4 md:bg-white md:text-center rounded md:border md:border-gray-500 md:hover:bg-[#fbd965] text-left text-base md:text-lg font-bold md:font-normal">Nhà Hàng</a>
+              <a href="/pages/nha-thuoc.html" class="whitespace-nowrap block px-2 py-2 md:px-6 md:py-4 md:bg-white md:text-center rounded md:border md:border-gray-500 md:hover:bg-[#fbd965] text-left text-base md:text-lg font-bold md:font-normal">Nhà Thuốc</a>
+              <a href="" class="whitespace-nowrap block px-2 py-2 md:px-6 md:py-4 md:bg-white md:text-center rounded md:border md:border-gray-500 md:hover:bg-[#fbd965] text-left text-base md:text-lg font-bold md:font-normal">Quán ăn</a>
+            </div>
+          </div>
+          <a href="" class="px-2 pb-1_5 text-black nav_link w-full text-left md:whitespace-nowrap">Kiến thức</a>
+          <a href="https://zalo.me/2613090557211314383" class="px-3 py-1 text-base md:whitespace-nowrap md:py-0 lg:py-0 text-black border-solid border-2 border-[#bababa] rounded bg-[#e3e3e3] text-center w-full md:w-auto lg:w-auto">Tư vấn</a>
+          <a href="https://hokinhdoanh.online/m/reg" class="px-2 py-1 text-base md:whitespace-nowrap md:py-0 lg:py-0 text-[#f0e0b2] border-solid border-2 border-[#bababa] rounded bg-[#e8b931] text-center w-full md:w-auto lg:w-auto">Đăng ký</a>
       </nav>
     </div>
   </header>
