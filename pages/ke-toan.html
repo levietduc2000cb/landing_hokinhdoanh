@@ -740,16 +740,40 @@
     }
   }
 
+  document.addEventListener("scroll", function () {
+    if (screen.width < 1024) {
+      const elements = document.querySelectorAll(".item-hover p");
+      const windowHeight = window.innerHeight;
+
+      elements.forEach((element, index) => {
+        const elementPosition = element.getBoundingClientRect().top;
+        if (elementPosition < windowHeight && elementPosition >= 0) {
+
+          setTimeout(() => {
+            element.classList.remove("opacity-0");
+            element.classList.add("animation__fadeIn");
+          }, index * 1500);
+        }
+      })
+    }
+  });
+
   function resetCss() {
     const forcusFeature = document.querySelector(".forcus-feature");
     const textForcusFeature = document.querySelector(".forcus-text-feature");
     const focusSubContent = document.querySelector('.opacity-100');
 
     if (forcusFeature && textForcusFeature && focusSubContent) {
-      forcusFeature.classList.remove("forcus-feature");
-      textForcusFeature.classList.remove("forcus-text-feature");
-      focusSubContent.classList.remove("opacity-100");
-      focusSubContent.classList.add("opacity-0");
+      if (screen.width < 1024) {
+        forcusFeature.classList.remove("forcus-feature");
+        textForcusFeature.classList.remove("forcus-text-feature");
+      } else {
+        forcusFeature.classList.remove("forcus-feature");
+        textForcusFeature.classList.remove("forcus-text-feature");
+        focusSubContent.classList.remove("opacity-100");
+        focusSubContent.classList.add("opacity-0");
+      }
+
     }
   }
 </script>

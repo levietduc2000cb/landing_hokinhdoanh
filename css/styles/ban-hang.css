@@ -21,6 +21,14 @@ html {
 .animation__backInRight {
   animation: slideInFromRight 0.5s ease-out;
 }
+.item-hover p {
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Định nghĩa animation cho fadeIn */
+.animation__fadeIn {
+  opacity: 1;
+}
 
 .forcus-feature {
   background-color: #f3f4f6;
