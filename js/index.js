@@ -23,6 +23,10 @@ document.addEventListener('DOMContentLoaded', function () {
     let runCarouselFeatureTitle;
     let featureTitles = document.querySelectorAll(".feature_title");
     let featureTitlesLength = featureTitles.length;
+    let contactForm = document.getElementById('contact_form');
+    let contactButton = document.getElementById("contact_button");
+    let contactLoading = document.getElementById('contact_loading');
+    let hiddenIframe = document.getElementById("hidden_iframe");
     //Chạy đếm
     let counters = document.querySelectorAll('.counter');
     //Slide trang home
@@ -135,4 +139,19 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
     featuresObserver.observe(features);
+
+    //Xử lý khi submit form
+    contactForm.addEventListener('submit', function() {
+        // Hiển thị loading khi form được submit
+        contactButton.style.display = "none";
+        contactLoading.style.display = 'flex';
+    });
+    
+    hiddenIframe.addEventListener("load",function() {
+        // Ẩn loading khi iframe hoàn thành tải (khi server đã xử lý xong yêu cầu)
+        contactButton.style.display = "flex";
+        contactLoading.style.display = 'none';
+        alert("Gửi liên hệ thành công!!!");
+    })
 });
+
