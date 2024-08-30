@@ -33,7 +33,7 @@
     };
   </script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <script defer src="../index.js"></script>
+  <script defer src="../js/index.js"></script>
   <title>Bán Hàng</title>
 </head>
 
@@ -528,16 +528,18 @@
             Cần tư vấn thêm về nền tảng <br />
             <span class="text-yellow-400">HKDO (hokinhdoanhonline)</span>?
           </h3>
-          <form action="#" method="POST" class="space-y-4">
-            <input type="text" placeholder="Tên của bạn" class="w-full p-2 border rounded-lg xs:text-sm" />
-            <input type="email" placeholder="Email của bạn" class="w-full p-2 border rounded-lg xs:text-sm" />
-            <input type="text" placeholder="Số điện thoại" class="w-full p-2 border rounded-lg xs:text-sm" />
+          <form id="contact_form" method="POST" action="https://shop10.hokinhdoanh.online/sendEmailContact" class="space-y-4" target="hidden_iframe">
+            <input name="full_name" type="text" placeholder="Tên của bạn" class="w-full p-2 border rounded-lg xs:text-sm" />
+            <input name="email" type="email" placeholder="Email của bạn" class="w-full p-2 border rounded-lg xs:text-sm" />
+            <input name="phone" type="text" placeholder="Số điện thoại" class="w-full p-2 border rounded-lg xs:text-sm" />
             <input type="text" placeholder="Tên cửa hàng" class="w-full p-2 border rounded-lg xs:text-sm" />
-            <textarea placeholder="Nội dung cần tư vấn" class="w-full p-2 border rounded-lg xs:text-sm"></textarea>
-            <button type="submit" class="bg-yellow-500 text-white font-semibold py-2 px-4 rounded-lg w-full">
+            <textarea name="question" placeholder="Nội dung cần tư vấn" class="w-full p-2 border rounded-lg xs:text-sm"></textarea>
+            <button type="submit" id="contact_button" class="bg-yellow-500 text-white font-semibold py-2 px-4 rounded-lg w-full justify-center">
               Tư vấn Miễn phí
             </button>
+            <div id="contact_loading" style="display: none;" class="flex justify-center items-center"><div class="border-gray-300 h-10 w-10 animate-spin rounded-full border-8 border-t-blue-600"></div></div>
           </form>
+          <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
         </div>
       </div>
 

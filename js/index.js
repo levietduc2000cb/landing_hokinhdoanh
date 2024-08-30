@@ -37,6 +37,21 @@ document.addEventListener('DOMContentLoaded', function () {
     //Lướt từ trái sang phải và từ phải sang trái
     let animationSwipeRights = document.querySelectorAll('.animation_swipe_right');
     let animationSwipeLefts = document.querySelectorAll('.animation_swipe_left');
+
+    //Xử lý khi submit form
+    contactForm.addEventListener('submit', function() {
+        // Hiển thị loading khi form được submit
+        contactButton.style.display = "none";
+        contactLoading.style.display = 'flex';
+        console.log("contactForm submit");
+    });
+    
+    hiddenIframe.addEventListener("load",function() {
+        // Ẩn loading khi iframe hoàn thành tải (khi server đã xử lý xong yêu cầu)
+        contactButton.style.display = "flex";
+        contactLoading.style.display = 'none';
+        alert("Gửi liên hệ thành công!!!");
+    })
     // Khác
     let observer = new IntersectionObserver(function(entries) {
         entries.forEach(function(entry) {
@@ -139,19 +154,5 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
     featuresObserver.observe(features);
-
-    //Xử lý khi submit form
-    contactForm.addEventListener('submit', function() {
-        // Hiển thị loading khi form được submit
-        contactButton.style.display = "none";
-        contactLoading.style.display = 'flex';
-    });
-    
-    hiddenIframe.addEventListener("load",function() {
-        // Ẩn loading khi iframe hoàn thành tải (khi server đã xử lý xong yêu cầu)
-        contactButton.style.display = "flex";
-        contactLoading.style.display = 'none';
-        alert("Gửi liên hệ thành công!!!");
-    })
 });
 
