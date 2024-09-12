@@ -17,6 +17,25 @@
       },
     };
   </script>
+  <style>
+    .desktop-img {
+      display: block;
+    }
+
+    .mobile-img {
+      display: none;
+    }
+
+    @media (max-width: 639px) {
+      .desktop-img {
+        display: none;
+      }
+
+      .mobile-img {
+        display: block;
+      }
+    }
+  </style>
 </head>
 
 <body class="bg-gray-100 p-4">
@@ -48,7 +67,10 @@
       <div class="flex flex-col items-center">
         <h2 class="text-2xl text-center font-semibold text-[#fd5722] mb-4">Bước 2: Đăng ký tài khoản Người vận chuyển
         </h2>
-        <img src="../assets/contents/nguoi-van-chuyen/3.png" alt="Đăng ký tài khoản" class="w-4/5 xs:w-full">
+        <img src="../assets/contents/nguoi-van-chuyen/3.png" alt="Đăng ký tài khoản"
+          class="w-4/5 xs:w-full desktop-img">
+        <img src="../assets/contents/nguoi-van-chuyen/mobile-3.png" alt="Đăng ký tài khoản"
+          class="w-4/5 xs:w-full mobile-img">
       </div>
 
       <hr>
@@ -57,7 +79,8 @@
       <div class="flex flex-col items-center">
         <h2 class="text-2xl text-center font-semibold text-[#fd5722] mb-4">Bước 3: Đăng nhập tài khoản Người vận chuyển
         </h2>
-        <img src="../assets/contents/nguoi-van-chuyen/4.png" alt="Đăng nhập" class="w-4/5 xs:w-full">
+        <img src="../assets/contents/nguoi-van-chuyen/4.png" alt="Đăng nhập" class="w-4/5 xs:w-full desktop-img">
+        <img src="../assets/contents/nguoi-van-chuyen/mobile-4.png" alt="Đăng nhập" class="w-4/5 xs:w-full mobile-img">
       </div>
 
       <hr>
@@ -67,8 +90,12 @@
         <h2 class="text-2xl text-center font-semibold text-[#fd5722] mb-4">Bước 4: Xem đơn hàng cần vận chuyển & nhận
           chuyển </h2>
         <div class="flex flex-col gap-6 items-center">
-          <img src="../assets/contents/nguoi-van-chuyen/5.png" alt="Xem đơn hàng 1" class="w-4/5 xs:w-full">
-          <img src="../assets/contents/nguoi-van-chuyen/6.png" alt="Xem đơn hàng 2" class="w-4/5 xs:w-full">
+          <img src="../assets/contents/nguoi-van-chuyen/5.png" alt="Xem đơn hàng 1" class="w-4/5 xs:w-full desktop-img">
+          <img src="../assets/contents/nguoi-van-chuyen/mobile-5.png" alt="Xem đơn hàng 1"
+            class="w-4/5 xs:w-full mobile-img">
+          <img src="../assets/contents/nguoi-van-chuyen/6.png" alt="Xem đơn hàng 2" class="w-4/5 xs:w-full desktop-img">
+          <img src="../assets/contents/nguoi-van-chuyen/mobile-6.png" alt="Xem đơn hàng 2"
+            class="w-4/5 xs:w-full mobile-img">
         </div>
       </div>
 
@@ -79,7 +106,13 @@
         <h2 class="text-2xl text-center font-semibold text-[#fd5722] mb-4">Bước 5: Theo dõi đơn hàng đã nhận
         </h2>
         <img src="../assets/contents/nguoi-van-chuyen/7.png" alt="Theo dõi đơn hàng" class="w-4/5 xs:w-full">
-        <p class="text-center mt-2 text-sm">Nhấn vào ô Thông báo ở cuối Sidebar để theo dõi các thông báo về đơn hàng
+        <p class="text-center mt-3 text-sm desktop-img">Nhấn vào thông báo hiển thị trên màn hình
+          hoặc vào ô <br>
+          <b>“Thông báo”</b> ở cuối Sidebar để theo dõi chi tiết đơn hàng
+        </p>
+        <p class="text-center mt-3 text-sm mobile-img">Nhấn vào thông báo hiển thị trên màn hình
+          hoặc vào ô
+          <b>“Thông báo”</b> ở cuối Sidebar để theo dõi chi tiết đơn hàng
         </p>
 
       </div>
@@ -91,8 +124,12 @@
         <h2 class="text-2xl text-center font-semibold text-[#fd5722] mb-4">Bước 6: Vận chuyển và xác nhận hoàn thành vận
           chuyển </h2>
         <div class="flex flex-col gap-4 items-center">
-          <img src="../assets/contents/nguoi-van-chuyen/8.png" alt="Vận chuyển 1" class="w-4/5 xs:w-full">
-          <img src="../assets/contents/nguoi-van-chuyen/9.png" alt="Vận chuyển 2" class="w-4/5 xs:w-full">
+          <img src="../assets/contents/nguoi-van-chuyen/8.png" alt="Vận chuyển 1" class="w-4/5 xs:w-full desktop-img">
+          <img src="../assets/contents/nguoi-van-chuyen/mobile-8.png" alt="Vận chuyển 1"
+            class="w-4/5 xs:w-full mobile-img">
+          <img src="../assets/contents/nguoi-van-chuyen/9.png" alt="Vận chuyển 2" class="w-4/5 xs:w-full desktop-img">
+          <img src="../assets/contents/nguoi-van-chuyen/mobile-9.png" alt="Vận chuyển 2"
+            class="w-4/5 xs:w-full mobile-img">
         </div>
       </div>
     </div>

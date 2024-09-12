@@ -17,6 +17,25 @@
       },
     };
   </script>
+  <style>
+    .desktop-img {
+      display: block;
+    }
+
+    .mobile-img {
+      display: none;
+    }
+
+    @media (max-width: 639px) {
+      .desktop-img {
+        display: none;
+      }
+
+      .mobile-img {
+        display: block;
+      }
+    }
+  </style>
 </head>
 
 <body class="bg-gray-100 p-4">
@@ -47,7 +66,9 @@
       <!-- Bước 2 -->
       <div class="flex flex-col items-center">
         <h2 class="text-2xl text-center font-semibold text-green-600 mb-4">Bước 2: Đăng ký tài khoản Hộ kinh doanh </h2>
-        <img src="../assets/contents/ho-kinh-doanh/3.png" alt="Đăng ký tài khoản" class="w-4/5 xs:w-full">
+        <img src="../assets/contents/ho-kinh-doanh/3.png" alt="Đăng ký tài khoản" class="w-4/5 xs:w-full desktop-img">
+        <img src="../assets/contents/ho-kinh-doanh/mobile-3.png" alt="Đăng ký tài khoản"
+          class="w-4/5 xs:w-full mobile-img">
       </div>
 
       <hr>
@@ -56,7 +77,9 @@
       <div class="flex flex-col items-center">
         <h2 class="text-2xl text-center font-semibold text-green-600 mb-4">Bước 3: Chuyển sang phần mềm
           hokinhdoanh.online </h2>
-        <img src="../assets/contents/ho-kinh-doanh/4.png" alt="Chuyển phần mềm" class="w-4/5 xs:w-full">
+        <img src="../assets/contents/ho-kinh-doanh/4.png" alt="Chuyển phần mềm" class="w-4/5 xs:w-full desktop-img">
+        <img src="../assets/contents/ho-kinh-doanh/mobile-4.png" alt="Chuyển phần mềm"
+          class="w-4/5 xs:w-full mobile-img">
       </div>
 
       <hr>
@@ -65,11 +88,18 @@
       <div>
         <h2 class="text-2xl text-center font-semibold text-green-600 mb-4">Bước 4: Khai báo thông tin sản phẩm </h2>
         <div class="flex flex-col gap-6 items-center">
-          <img src="../assets/contents/ho-kinh-doanh/5.png" alt="Điền thông tin 1" class="w-4/5 xs:w-full">
-          <img src="../assets/contents/ho-kinh-doanh/6.png" alt="Điền thông tin 2" class="w-4/5 xs:w-full">
-          <img src="../assets/contents/ho-kinh-doanh/7.png" alt="Điền thông tin 3" class="w-4/5 xs:w-full">
+          <img src="../assets/contents/ho-kinh-doanh/5.png" alt="Điền thông tin 1" class="w-4/5 xs:w-full desktop-img">
+          <img src="../assets/contents/ho-kinh-doanh/6.png" alt="Điền thông tin 2" class="w-4/5 xs:w-full desktop-img">
+          <img src="../assets/contents/ho-kinh-doanh/7.png" alt="Điền thông tin 3" class="w-4/5 xs:w-full desktop-img">
+          <img src="../assets/contents/ho-kinh-doanh/mobile-5.png" alt="Điền thông tin 1"
+            class="w-4/5 xs:w-full mobile-img">
+          <img src="../assets/contents/ho-kinh-doanh/mobile-6.png" alt="Điền thông tin 2"
+            class="w-4/5 xs:w-full mobile-img">
+          <img src="../assets/contents/ho-kinh-doanh/mobile-7.png" alt="Điền thông tin 3"
+            class="w-4/5 xs:w-full mobile-img">
         </div>
-        <p class="text-center text-md font-normal mt-8">*Lưu ý: những thông tin khác bổ sung sau (nếu có)</p>
+        <p class="text-center text-md font-normal mt-8 xs:text-xs">*Lưu ý: những thông tin khác bổ sung sau (nếu có)
+        </p>
       </div>
 
       <hr>
@@ -79,8 +109,12 @@
         <h2 class="text-2xl text-center font-semibold text-green-600 mb-4">Bước 5: Xem và chia sẻ link cửa hàng online
         </h2>
         <div class="flex flex-col gap-4 items-center">
-          <img src="../assets/contents/ho-kinh-doanh/8.png" alt="Xem cửa hàng 1" class="w-4/5 xs:w-full">
-          <img src="../assets/contents/ho-kinh-doanh/9.png" alt="Xem cửa hàng 2" class="w-4/5 xs:w-full">
+          <img src="../assets/contents/ho-kinh-doanh/8.png" alt="Xem cửa hàng 1" class="w-4/5 xs:w-full desktop-img">
+          <img src="../assets/contents/ho-kinh-doanh/9.png" alt="Xem cửa hàng 2" class="w-4/5 xs:w-full desktop-img">
+          <img src="../assets/contents/ho-kinh-doanh/mobile-8.png" alt="Xem cửa hàng 1"
+            class="w-4/5 xs:w-full mobile-img">
+          <img src="../assets/contents/ho-kinh-doanh/mobile-9.png" alt="Xem cửa hàng 2"
+            class="w-4/5 xs:w-full mobile-img">
         </div>
       </div>
 
@@ -90,7 +124,13 @@
       <div class="pb-6 flex flex-col items-center">
         <h2 class="text-2xl text-center font-semibold text-green-600 mb-4">Bước 6: Theo dõi đơn hàng online</h2>
         <img src="../assets/contents/ho-kinh-doanh/10.png" alt="Theo dõi đơn hàng" class="w-4/5 xs:w-full">
-        <p class="text-center mt-3 text-sm">Nhấn vào ô Thông báo ở cuối Sidebar để theo dõi các thông báo về đơn hàng
+        <p class="text-center mt-3 text-sm desktop-img">Nhấn vào thông báo hiển thị trên màn hình
+          hoặc vào ô <br>
+          <b>“Thông báo”</b> ở cuối Sidebar để theo dõi chi tiết đơn hàng
+        </p>
+        <p class="text-center mt-3 text-sm mobile-img">Nhấn vào thông báo hiển thị trên màn hình
+          hoặc vào ô
+          <b>“Thông báo”</b> ở cuối Sidebar để theo dõi chi tiết đơn hàng
         </p>
       </div>
     </div>
